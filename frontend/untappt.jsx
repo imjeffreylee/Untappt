@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 // import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // let root = document.getElementById('root');
+  let root = document.getElementById('root');
   // let store = configureStore();
-  ReactDOM.render(<h1>In construction</h1>);
+  ReactDOM.render(<h1>In construction</h1>, root);
 })
