@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let store = configureStore();
 
   //test
-  window.store = store;
-  window.login = login;
+  // window.store = store;
+  // window.login = login;
   //test
 
   ReactDOM.render(<Root store={store} />, root);
