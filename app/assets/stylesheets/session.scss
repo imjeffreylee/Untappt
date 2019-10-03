@@ -1,8 +1,124 @@
 // Place all the styles related to the session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.seesion-form-container {
+.session-form-container {
   background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('beer-bg.jpg');
   background-size: cover;
   background-position: center top;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-signup h2 {
+  font-size: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.login-signup h6 {
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-signup input {
+  font-size: 1em;
+  width: 100%;
+  height: 40px;
+  padding: 2px 0px 0px 12px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.icon-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #a9a9a9;
+  margin-bottom: 15px;
+}
+
+.fa-user, .fa-unlock {
+  color: #a9a9a9;
+  margin-left: 12px;
+  border-right: 1px solid #a9a9a9;
+  padding-right: 12px;
+}
+
+.button-holder {
+  position: relative;
+  width: 100%;
+}
+
+.login-signup button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: #ffcc00;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.login-signup button:active {
+  box-shadow: 2px 2px 2px gray inset;
+}
+
+p.login-signup-switch {
+  font-size: 20px;
+  color: grey;
+  margin-top: 15px;
+}
+
+p.login-signup-switch a {
+  text-decoration: none;
+  color: #c60;
+}
+
+form.login-signup {
+  width: 400px;
+  background: white;
+  display: flex;
+  justify-content: center;
+}
+
+.input-holder {
+  width: 100%;
+}
+
+.inner-session-form-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px 16px;
+  min-height: 450px;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.err-msg {
+  color: white;
+  background: #E25858;
+  border: 1px solid #E25858;
+  border-radius: 1px;
+  list-style-type: none;
+  padding: 5px;
+  text-align: center;
 }

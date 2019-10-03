@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Greeting = () => {
   return (
     <div className="masthead">
-      <nav className="login-signup">
+      <nav className="nav-login-signup">
         <Link className="nav-login" to="/login">Sign in</Link>
         <Link className="nav-signup" to="/signup">Create an account</Link>
       </nav>

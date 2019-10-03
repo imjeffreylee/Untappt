@@ -3,15 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.login-signup {
+.nav-login-signup {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
 }
 
-.login-signup a {
+.nav-login-signup a {
   text-decoration: none;
   border-radius: 5px;
   border: 2px solid white;
@@ -23,7 +24,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.login-signup a:hover {
+.nav-login-signup a:hover {
   background: white;
   color: black;
   transition: .3s;
