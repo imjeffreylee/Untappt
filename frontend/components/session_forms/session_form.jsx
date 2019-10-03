@@ -38,8 +38,11 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div>
+        <h1 className='josefin'>UNTAPPT</h1>
         <form onSubmit={this.handleSubmit}>
-          {this.props.formType} or {this.props.navLink}
+          <p>
+            {this.props.formType} or {this.props.navLink}
+          </p>
           <br/>
           <label>Username:
             <input type="text"

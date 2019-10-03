@@ -6,12 +6,9 @@ body {
 }
 
 .login-signup {
-  background: 0 0;
   padding: 20px;
   display: flex;
   justify-content: flex-end;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
 }
 
 .login-signup a {
@@ -21,7 +18,15 @@ body {
   padding: 15px;
   color: white;
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: 1em;
+  // font-weight: 900;
+  font-family: 'Raleway', sans-serif;
+}
+
+.login-signup a:hover {
+  background: white;
+  color: black;
+  transition: .3s;
 }
 
 .nav-login {
@@ -35,7 +40,7 @@ h1 {
   font-weight: 700;
 }
 
-header {
+.masthead {
   background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('beer-bg.jpg');
   background-size: cover;
   background-position: center top;
@@ -57,16 +62,20 @@ header {
   height: auto;
 }
 
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 .greeting-text-block {
-  font-family: helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .greeting-text-block p {
   font-size: 2.0rem;
-  font-weight: 700;
   margin-top: 25px;
 }
 
@@ -81,6 +90,26 @@ h6 {
   font-size: 12px;
 }
 
-// .fab {
+i.fab {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
 
-// }
+i.fa-apple {
+  margin-right: 10px;
+}
+
+i.fa-android {
+  margin-left: 10px;
+}
+
+i.fa-untappd {
+  font-size: 6rem;
+  margin-bottom: 10px;
+}
+
+.icon-block {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
