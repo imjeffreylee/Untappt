@@ -3,18 +3,17 @@ import GreetingsContainer from "./greetings/greetings_container";
 import LoginFormContainer from "./session_forms/login_form_container";
 import SignupFormContainer from "./session_forms/signup_form_container";
 import { Route, Link } from "react-router-dom";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
   <div>
     <header>
-      <Link to='/'>
-        <h1>Untappt</h1>
-      </Link>
       <GreetingsContainer />
     </header>
-
-    <Route path="/login" component={LoginFormContainer} />
-    <Route path="/signup" component={SignupFormContainer} />
+    <br/>
+    <AuthRoute path="/login" component={LoginFormContainer} />
+    <AuthRoute path="/signup" component={SignupFormContainer} />
+    <ProtectedRoute exact path="/login" component={LoginFormContainer} />
   </div>
 );
 

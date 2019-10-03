@@ -1,3 +1,82 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  width: 100%;
+}
+
+.login-signup {
+  background: 0 0;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.login-signup a {
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid white;
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.nav-login {
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 70px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+header {
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('beer-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+}
+
+.greeting-block {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 70px;
+}
+
+.greeting-block img {
+  width: 50%;
+  height: auto;
+}
+
+.greeting-text-block {
+  font-family: helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting-text-block p {
+  font-size: 2.0rem;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.yellow-bar {
+  border: 2px solid #ffc000;
+  width: 10%;
+  margin-top: 10px;
+}
+
+h6 {
+  letter-spacing: 3px;
+  font-size: 12px;
+}
