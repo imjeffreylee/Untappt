@@ -22,8 +22,12 @@ const Greeting = ({ currentUser, logout }) => {
             <h6>DRINK SOCIALLY</h6>
             <div className="yellow-bar"></div>
             <p>Discover and share your favorite beer.</p>
-            <i class="fab fa-apple"></i>
-            <i class="fab fa-android"></i>
+            <span>
+              <i className="fab fa-apple"></i>
+            </span>
+            <span>
+              <i className="fab fa-android"></i>
+            </span>
           </div>
           <img src={window.phoneURL} alt="img"/>
         </div>
