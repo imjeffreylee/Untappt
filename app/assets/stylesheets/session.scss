@@ -33,6 +33,7 @@
   padding: 2px 0px 0px 12px;
   box-sizing: border-box;
   border: none;
+  width: 80%;
 }
 
 .icon-input-wrapper {
@@ -120,6 +121,8 @@ form.login-signup {
   border: 1px solid #E25858;
   border-radius: 5px;
   list-style-type: none;
-  padding: 13px;
+  padding: 5px;
+  margin-top: 5px;
   text-align: center;
+  font-size: 12px;
 }

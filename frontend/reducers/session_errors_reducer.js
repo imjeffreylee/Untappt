@@ -3,11 +3,6 @@ import {
   RECEIVE_CURRENT_USER,
   CLEAR_ERRORS
 } from "../actions/session_actions";
-// import merge from "lodash/merge";
-
-// const _null_errors = {
-//   errors: null
-// };
 
 export default (state = [], action) => {
   Object.freeze(state);

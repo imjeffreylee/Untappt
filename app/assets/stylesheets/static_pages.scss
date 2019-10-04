@@ -20,7 +20,6 @@ body {
   color: white;
   text-transform: uppercase;
   font-size: 1em;
-  // font-weight: 900;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -96,12 +95,17 @@ i.fab {
   font-size: 30px;
 }
 
-i.fa-apple {
+i.fa-github {
   margin-right: 10px;
 }
 
-i.fa-android {
+i.fa-linkedin-in {
   margin-left: 10px;
+}
+
+i.fa-github:hover, i.fa-linkedin-in:hover {
+  color: gray;
+  transition: .3s;
 }
 
 i.fa-untappd {

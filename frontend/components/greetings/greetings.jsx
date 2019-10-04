@@ -17,10 +17,14 @@ const Greeting = () => {
           <p>Discover and share your favorite beer.</p>
           <div className="icon-block">
             <span>
-              <i className="fab fa-apple"></i>
+              <a href="https://github.com/imjeffreylee" target="_blank">
+                <i className="fab fa-github"></i>
+              </a>
             </span>
             <span>
-              <i className="fab fa-android"></i>
+              <a href="https://www.linkedin.com/in/jeffrey-lee-22b94196/" target="_blank">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
             </span>
           </div>
         </div>
