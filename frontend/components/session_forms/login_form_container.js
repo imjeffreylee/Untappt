@@ -5,12 +5,11 @@ import SessionForm from './session_form';
 import { Link } from 'react-router-dom';
 
 const msp = (state) => {
-  let errors = state.errors
   return {
-    errors: errors.session,
-    formType: 'Login',
-    navLink: <Link to='/signUp'>Sign up</Link>
-  }
+    errors: state.errors.session,
+    formType: "Login",
+    navLink: <Link to="/signUp">Sign up</Link>
+  };
 }
 
 const mdp = dispatch => {

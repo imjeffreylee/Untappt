@@ -30,8 +30,6 @@
 
 .login-signup input {
   font-size: 1em;
-  width: 100%;
-  height: 40px;
   padding: 2px 0px 0px 12px;
   box-sizing: border-box;
   border: none;
@@ -42,6 +40,8 @@
   align-items: center;
   border: 1px solid #a9a9a9;
   margin-bottom: 15px;
+  border-radius: 5px;
+  height: 40px;
 }
 
 .fa-user, .fa-unlock {
@@ -69,6 +69,7 @@
   background-color: #ffcc00;
   box-sizing: border-box;
   box-shadow: 2px 2px 2px gray;
+  border-radius: 5px;
 }
 
 .login-signup button:active {
@@ -117,8 +118,8 @@ form.login-signup {
   color: white;
   background: #E25858;
   border: 1px solid #E25858;
-  border-radius: 1px;
+  border-radius: 5px;
   list-style-type: none;
-  padding: 5px;
+  padding: 13px;
   text-align: center;
 }
