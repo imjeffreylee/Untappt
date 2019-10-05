@@ -69,17 +69,19 @@ class userProfile extends React.Component {
             </div>
           </div>
           <section className="profile-body-content">
-            <div className="profile-body-pic-box">
-              <div className="img-box">
-                <img src={window.fakeDemo} alt="fake-data-img"/>
+            <div className="photo-aside-wrapper">
+              <div className="profile-body-pic-box">
+                <div className="img-box">
+                  <img src={window.fakeDemo} alt="fake-data-img"/>
+                </div>
+                <div className="img-box"></div>
+                <div className="img-box"></div>
+                <div className="img-box"></div>
+                <div className="img-box"></div>
               </div>
-              <div className="img-box"></div>
-              <div className="img-box"></div>
-              <div className="img-box"></div>
-              <div className="img-box"></div>
+              <aside className="profile-sidebar"></aside>
             </div>
             <div className="profile-checkin-feeds"></div>
-            <aside className="profile-sidebar"></aside>
           </section>
         </section>
       </>
