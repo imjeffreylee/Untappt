@@ -4,11 +4,10 @@ import userProfile from "./user";
 
 const msp = (state, ownProps) => {
   let userId = ownProps.match.params.userId;
-  let users = state.entities.users;
+  let user = state.entities.users[userId];
   return {
-    user: users.userId,
-    users: users,
-    
+    user,
+    users: state.entities.users
   };
 };
 

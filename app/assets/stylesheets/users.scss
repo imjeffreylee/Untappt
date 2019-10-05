@@ -1,3 +1,181 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+nav.user-profile-navbar {
+  background: #ffcc00;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+
+.nav-logo {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 45px;
+  font-weight: 700;
+}
+
+.nav-logo h1 {
+  font-size: 30px;
+}
+
+.nav-logo h6 {
+  font-size: 6px;
+}
+
+nav.user-profile-navbar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav.user-profile-navbar ul li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+nav.user-profile-navbar ul li a:hover {
+  color: gray;
+  transition: .3s;
+}
+
+nav.user-profile-navbar i {
+  margin: 0;
+}
+
+.logo-and-ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pic-username {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pic-username img {
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+section.profile-body {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.profile-body-header {
+  background: linear-gradient(transparent, rgba(0,0,0,0.6)), image-url('profile-bg-img.jpg');
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.profile-body-header img {
+  height: 80px;
+  width: 80px;
+  border: 2px solid white;
+  border-radius: 100%;
+  margin: 0 0 30px 20px;
+}
+
+header.user-profile-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-info {
+  margin-left: 45px;
+  margin-bottom: 30px;
+}
+
+.profile-info h2 {
+  color: white;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+.profile-info p {
+  color: white;
+  font-size: 1.1em;
+}
+
+.profile-info li {
+  color: white;
+  list-style-type: none;
+  margin-right: 24px;
+  font-size: .9em;
+}
+
+.info-list {
+  margin-top: 15px;
+  display: flex;
+}
+
+.username-block {
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+  width: 170px;
+}
+
+.pic-username p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: gray;
+  text-align: center;
+}
+
+.create-space {
+  height: 48px;
+}
+
+// .profile-body-content {
+//   box-sizing: border-box;
+// }
+
+.profile-body-pic-box {
+  border: 1px solid black;
+  width: 67%;
+}
+
+.img-box img {
+  width: 20%;
+  height: auto;
+  margin: 16px auto;
+}
+
+.img-box {
+  padding: 0 4px;
+}
+
+aside.profile-sidebar {
+  border: 1px solid green;
+  width: 33%;
+}
+
+.photo-aside-wrapper {
+  display: flex;
+}
