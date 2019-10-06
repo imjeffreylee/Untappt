@@ -52,7 +52,7 @@ class userProfile extends React.Component {
                 </div>
                 <div className="pic-username">                
                   <img src={window.beerProfile} alt="profile"/>
-                    <button className="username-block" onClick={this.logOut}>Log Out</button>
+                    <button className="logout-btn" onClick={this.logOut}>Log Out</button>
                 </div>
               </div>
             </nav>
