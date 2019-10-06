@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_04_135801) do
+ActiveRecord::Schema.define(version: 2019_10_06_202524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "breweries", force: :cascade do |t|
+    t.string "brewery_name", null: false
+    t.string "brewery_type", null: false
+    t.string "origin", null: false
+    t.text "brewery_description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brewery_name"], name: "index_breweries_on_brewery_name", unique: true
+  end
+
+  create_table "drinks", force: :cascade do |t|
+    t.string "drink_name", null: false
+    t.integer "brewery_id", null: false
+    t.string "style", null: false
+    t.float "ABV", null: false
+    t.integer "IBU", null: false
+    t.text "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brewery_id"], name: "index_drinks_on_brewery_id"
+    t.index ["drink_name"], name: "index_drinks_on_drink_name", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -21,14 +44,13 @@ ActiveRecord::Schema.define(version: 2019_10_04_135801) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "gender"
-    t.string "country"
-    t.string "birthday"
-    t.string "profile_photo"
-    t.index ["email"], name: "index_users_on_email"
+    t.string "location"
+    t.string "email", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "gender", null: false
+    t.string "country", null: false
+    t.string "birthday", null: false
     t.index ["session_token"], name: "index_users_on_session_token"
     t.index ["username"], name: "index_users_on_username"
   end

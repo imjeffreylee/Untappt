@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+guest = User.create(
+  username: "guest",
+  password: "password",
+  location: "Taipei",
+  email: "drinkmore@untappt.com",
+  first_name: "Guest",
+  last_name: "User",
+  gender: "Prefer not to say",
+  country: "Taiwan, ROC",
+  birthday: "01/01/1987"
+)

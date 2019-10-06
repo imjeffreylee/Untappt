@@ -77,15 +77,22 @@
   box-shadow: 2px 2px 2px gray inset;
 }
 
-p.login-signup-switch {
+p.login-signup-switch, p.guest-user {
   font-size: 20px;
   color: grey;
+}
+
+p.login-signup-switch {
   margin-top: 15px;
 }
 
-p.login-signup-switch a {
+p.login-signup-switch a, p.guest-user a {
   text-decoration: none;
   color: #c60;
+}
+
+p.guest-user a:hover {
+  cursor: pointer;
 }
 
 form.login-signup {
@@ -126,7 +133,3 @@ form.login-signup {
   text-align: center;
   font-size: 12px;
 }
-
-// .guest-button {
-//   margin-bottom: 10px;
-// }

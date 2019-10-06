@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
           {this.props.errors.map((err, i) => {
             return (
               <li key={i} className="err-msg">
-                {err} <span>\(^Д^)/</span>
+                {err} <span>¯\_(ツ)_/¯</span>
               </li>
             )
           })}
@@ -81,14 +81,14 @@ class SessionForm extends React.Component {
                   />
                 </div>
               </div>
-              <div className="button-holder guest-button">
-                <a onClick={this.handleGuest}>Try it as a guest</a>
-              </div>
               <div className="button-holder">
                 <button>{this.props.formType}</button>
               </div>
               <p className="login-signup-switch">
                 Not with us yet? <Link to="/signUp" onClick={this.props.clearErrors}>Sign up</Link>
+              </p>
+              <p className="guest-user">
+                or <a onClick={this.handleGuest}>try it as a guest</a>
               </p>
             </div>
           </form>

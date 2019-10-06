@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brewery_name: MyString
+  brewery_type: MyString
+  origin: MyString
+  brewery_description: MyText
+
+two:
+  brewery_name: MyString
+  brewery_type: MyString
+  origin: MyString
+  brewery_description: MyText
