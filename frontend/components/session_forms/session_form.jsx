@@ -10,11 +10,21 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuest = this.handleGuest.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = merge({}, this.state);
+    this.props.processForm(user);
+  }
+
+  handleGuest(e) {
+    e.preventDefault();
+    const user = merge({}, {
+      username: "guest",
+      password: "password"
+    })
     this.props.processForm(user);
   }
 
@@ -70,6 +80,9 @@ class SessionForm extends React.Component {
                     className="input-password"
                   />
                 </div>
+              </div>
+              <div className="button-holder guest-button">
+                <a onClick={this.handleGuest}>Try it as a guest</a>
               </div>
               <div className="button-holder">
                 <button>{this.props.formType}</button>
