@@ -28,7 +28,7 @@ const Greeting = () => {
             </span>
           </div>
         </div>
-        <img src={window.phoneURL} alt="phone"/>
+        <img className="greeting-phone" src={window.phoneURL} alt="phone"/>
       </div>
     </div>
   )
