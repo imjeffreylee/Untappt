@@ -17,6 +17,7 @@ class userProfile extends React.Component {
   render() {
     return (
       <>
+      <div className="user-page-container">
         <header className="user-profile-header">
           <nav className="user-profile-navbar">
             <div className="nav-container">
@@ -74,7 +75,9 @@ class userProfile extends React.Component {
                 <div className="img-box">
                   <img src={window.fakeDemo} alt="fake-data-img"/>
                 </div>
-                <div className="img-box"></div>
+                <div className="img-box">
+                  <img src={window.fakeDemo2} alt="fake-data-img2" />
+                </div>
                 <div className="img-box"></div>
                 <div className="img-box"></div>
                 <div className="img-box"></div>
@@ -84,6 +87,7 @@ class userProfile extends React.Component {
             <div className="profile-checkin-feeds"></div>
           </section>
         </section>
+      </div>
       </>
     )
   }

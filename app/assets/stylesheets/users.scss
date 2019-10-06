@@ -80,6 +80,11 @@ section.profile-body {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  min-height: 950px;
+}
+
+.user-page-container {
+  background: #f5f2e8;
 }
 
 .profile-body-header {
@@ -152,23 +157,21 @@ header.user-profile-header {
   height: 48px;
 }
 
-// .profile-body-content {
-//   box-sizing: border-box;
-// }
-
 .profile-body-pic-box {
-  border: 1px solid black;
   width: 67%;
+  display: flex;
 }
 
 .img-box img {
-  width: 20%;
-  height: auto;
-  margin: 16px auto;
+  width: 135px;
+  height: 135px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .img-box {
   padding: 0 4px;
+  width: 20%;
 }
 
 aside.profile-sidebar {
