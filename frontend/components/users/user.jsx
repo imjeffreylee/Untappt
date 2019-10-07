@@ -62,7 +62,7 @@ class userProfile extends React.Component {
             <div className="profile-body-header">
               <img src={window.beerProfile} alt="profile" />
               <div className="profile-info">
-                <h2>Test User</h2>
+                <h2>{this.props.user.first_name} {this.props.user.last_name}</h2>
                 <p>{this.props.user.username}</p>
                 <ul className="info-list">
                   <li>TOTAL</li>
