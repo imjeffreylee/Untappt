@@ -8,11 +8,14 @@ class userProfile extends React.Component {
       userId: this.props.match.params.userId
     };
     this.logOut = this.logOut.bind(this);
+    // this.fetchAllBreweries = this.fetchAllBreweries.bind(this);
   }
 
   componentDidMount() {
     let userId = this.props.match.params.userId;
     this.props.fetchUser(userId);
+    // debugger
+    this.props.fetchBreweries();
   }
 
   logOut({ logout }) {
@@ -36,7 +39,10 @@ class userProfile extends React.Component {
                       <a href="#">The Pub</a>
                     </li>
                     <li>
-                      <a href="#">Breweries</a>
+                      <a onClick={this.fetchAllBreweries}>Breweries</a>
+                    </li>
+                    <li>
+                      <a href="#">Beers</a>
                     </li>
                     <li>
                       <a href="https://github.com/imjeffreylee" target="_blank">

@@ -16,3 +16,10 @@ guest = User.create(
   country: "Taiwan, ROC",
   birthday: "01/01/1987"
 )
+
+BBC = Brewery.create(
+  brewery_name: "Boston Beer Company",
+  brewery_type: "Region",
+  origin: "Boston, MA, USA",
+  brewery_description: "All the good beer!"
+)
