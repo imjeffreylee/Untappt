@@ -13,7 +13,6 @@ const Auth = ({ component: Component, path, loggedIn, exact, currentUser }) => (
 );
 
 const Protected = ({ component: Component, path, loggedIn, exact }) => {
-  // debugger
   return (
     <Route
       path={path}

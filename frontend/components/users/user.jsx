@@ -8,7 +8,6 @@ class userProfile extends React.Component {
       userId: this.props.match.params.userId
     };
     this.logOut = this.logOut.bind(this);
-    // this.fetchAllBreweries = this.fetchAllBreweries.bind(this);
   }
 
   componentDidMount() {
@@ -39,7 +38,7 @@ class userProfile extends React.Component {
                       <a href="#">The Pub</a>
                     </li>
                     <li>
-                      <a onClick={this.fetchAllBreweries}>Breweries</a>
+                      <Link to="/breweries">Breweries</Link>
                     </li>
                     <li>
                       <a href="#">Beers</a>

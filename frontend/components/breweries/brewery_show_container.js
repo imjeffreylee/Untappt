@@ -1,12 +1,12 @@
 import { connect } from "react-redux";
 import { fetchBrewery } from "../../actions/brewery_actions";
-import Brewery from "./brewery";
+import BreweryShow from "./brewery_show";
 
 const msp = (state, ownProps) => {
   let breweryId = ownProps.match.params.breweryId;
   let brewery = state.entities.breweries[breweryId];
   return {
-    brewery
+    brewery: brewery
   }
 }
 
@@ -16,4 +16,4 @@ const mdp = dispatch => {
   }
 }
 
-export default connect(msp, mdp)(Brewery);
+export default connect(msp, mdp)(BreweryShow);

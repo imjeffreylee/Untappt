@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Brewery extends React.Component {
+class BreweryShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,4 +23,4 @@ class Brewery extends React.Component {
   }
 }
 
-export default Brewery;
+export default BreweryShow;

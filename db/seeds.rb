@@ -23,3 +23,12 @@ BBC = Brewery.create(
   origin: "Boston, MA, USA",
   brewery_description: "All the good beer!"
 )
+
+Okt = Drink.create(
+  drink_name: "Samuel Adams OctoberFest",
+  brewery_id: 1,
+  style: "lager",
+  ABV: 5.3,
+  IBU: 16,
+  description: "In 1810, the Oktoberfest tradition was born when Munich celebrated the Crown Prince’s wedding with a special beer and 16 day party."
+)

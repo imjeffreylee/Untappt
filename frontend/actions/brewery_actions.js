@@ -11,6 +11,7 @@ export const receiveBrewery = brewery => {
 }
 
 export const receiveBreweries = breweries => {
+  // debugger
   return {
     type: RECEIVE_BREWERIES,
     breweries
@@ -18,13 +19,14 @@ export const receiveBreweries = breweries => {
 }
 
 export const fetchBrewery = id => dispatch => {
-  return BreweryAPIUtil.fetchBrewery(id).then(
+  return (BreweryAPIUtil.fetchBrewery(id).then(
     brewery => dispatch(receiveBrewery(brewery))
-  );
+  ));
 }
 
 export const fetchBreweries = () => dispatch => {
-  return BreweryAPIUtil.fetchBreweries().then(
+  // debugger
+  return (BreweryAPIUtil.fetchBreweries().then(
     breweries => dispatch(receiveBreweries(breweries))
-  );
+  ));
 }

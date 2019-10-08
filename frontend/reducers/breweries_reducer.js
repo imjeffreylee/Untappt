@@ -13,6 +13,7 @@ const BreweriesReducer = (state = {}, action) => {
       });
     
     case RECEIVE_BREWERIES:
+      // debugger
       return action.breweries;
   
     default:
