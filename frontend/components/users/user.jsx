@@ -13,8 +13,6 @@ class userProfile extends React.Component {
   componentDidMount() {
     let userId = this.props.match.params.userId;
     this.props.fetchUser(userId);
-    // debugger
-    this.props.fetchBreweries();
   }
 
   logOut({ logout }) {

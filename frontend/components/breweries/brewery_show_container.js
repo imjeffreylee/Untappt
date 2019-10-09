@@ -6,7 +6,7 @@ const msp = (state, ownProps) => {
   let breweryId = ownProps.match.params.breweryId;
   let brewery = state.entities.breweries[breweryId];
   return {
-    brewery: brewery
+    brewery
   }
 }
 
