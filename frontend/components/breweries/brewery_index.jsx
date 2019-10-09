@@ -12,6 +12,8 @@ class BreweriesIndex extends React.Component {
   }
 
   componentDidMount() {
+    // let userId = this.props.match.params.userId;
+    // this.props.fetchUser(userId);
     this.props.fetchBreweries();
   }
 
@@ -68,11 +70,20 @@ class BreweriesIndex extends React.Component {
             </div>
           </nav>
         </header>
-        <div>
-          <ul>
-            {breweries}
-          </ul>
-        </div>
+        <section className="profile-body">
+          <div className="create-space"></div>
+          <div className="brewery-list-container">
+            <div className="brewery-list-body">
+              <h3>Top Rated Breweries</h3>
+              <ul>
+                {breweries}
+              </ul>
+            </div>
+            <aside className="brewery-list-sidebar">
+
+            </aside>
+          </div>
+        </section>
       </>
     )
   }

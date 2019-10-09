@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { fetchBreweries } from "../../actions/brewery_actions";
+import { logout } from "../../actions/session_actions"
 import BreweryIndex from "./brewery_index";
 
 const msp = (state, ownProps) => {
@@ -13,7 +14,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return {
-    fetchBreweries: () => dispatch(fetchBreweries())
+    fetchBreweries: () => dispatch(fetchBreweries()),
+    logout: () => dispatch(logout())
   };
 };
 

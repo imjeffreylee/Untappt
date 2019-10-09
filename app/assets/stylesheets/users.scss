@@ -7,6 +7,7 @@ nav.user-profile-navbar {
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 100;
 }
 
 .nav-container {
@@ -82,10 +83,7 @@ section.profile-body {
   max-width: 1024px;
   margin: 0 auto;
   min-height: 950px;
-}
-
-.user-page-container {
-  background: #f5f2e8;
+  position: relative;
 }
 
 .profile-body-header {

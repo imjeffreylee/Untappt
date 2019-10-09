@@ -1,0 +1,30 @@
+// Place all the styles related to the api/breweries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.brewery-list-container {
+  min-height: 1366px;
+  margin-top: 28px;
+  margin-bottom: 64;
+  display: flex;
+}
+
+.brewery-list-container h3 {
+  background-color: #f9f9f9;
+  padding: 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e2e2e2;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
+.brewery-list-body {
+  width: 70%;
+  border: 1px solid black;
+  margin-right: 18px;
+}
+
+.brewery-list-sidebar {
+  width: 30%;
+  border: 1px solid black;
+  margin-left: 18px;
+}

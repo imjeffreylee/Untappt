@@ -16,3 +16,15 @@
 a:hover {
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background: #f5f2e8;
+}
