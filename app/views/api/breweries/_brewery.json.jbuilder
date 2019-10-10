@@ -2,4 +2,5 @@ json.extract! brewery,
 :id,
 :brewery_name,
 :brewery_type,
-:brewery_description
+:brewery_description,
+:origin

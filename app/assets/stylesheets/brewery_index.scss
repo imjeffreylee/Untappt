@@ -10,7 +10,7 @@
 
 .brewery-list-container h3 {
   background-color: #f9f9f9;
-  padding: 24px;
+  margin-bottom: 24px;
   box-sizing: border-box;
   border-bottom: 1px solid #e2e2e2;
   font-weight: 500;
@@ -19,12 +19,26 @@
 
 .brewery-list-body {
   width: 70%;
-  border: 1px solid black;
   margin-right: 18px;
+  border: 1px solid black;
+  padding: 24px;
+}
+
+.brew-topic-p p {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.brew-topic-p a {
+  color: #c60;
 }
 
 .brewery-list-sidebar {
   width: 30%;
   border: 1px solid black;
   margin-left: 18px;
+}
+
+.brew-list-container {
+  margin-top: 70px;
 }

@@ -1,0 +1,32 @@
+.brewery-list-body h2 {
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 1em;
+  margin-bottom: 6px;
+}
+
+.brew-show-info {
+  margin-left: 25px;
+}
+
+p.brew-type {
+  font-size: 1.25em;
+  margin-bottom: 6px;
+  color: #888;
+}
+
+p.brew-ori {
+  color: #888;
+  font-size: 1em;
+}
+
+.brew-show-info-container {
+  display: flex;
+  /* padding: 16px; */
+  margin-bottom: 24px;
+}
+
+.brew-show-info-container img {
+  width: 96px;
+  height: 96px;
+}

@@ -5,7 +5,6 @@ class Api::BreweriesController < ApplicationController
 
   def show
     @brewery = Brewery.find(params[:id])
-    # render "api/breweries/show"
   end
 
   def create

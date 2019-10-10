@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { fetchBrewery } from "../../actions/brewery_actions";
+import { logout } from "../../actions/session_actions";
 import BreweryShow from "./brewery_show";
 
 const msp = (state, ownProps) => {
@@ -12,8 +13,9 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return {
-    fetchBrewery: id => dispatch(fetchBrewery(id))
-  }
+    fetchBrewery: id => dispatch(fetchBrewery(id)),
+    logout: () => dispatch(logout())
+  };
 }
 
 export default connect(msp, mdp)(BreweryShow);

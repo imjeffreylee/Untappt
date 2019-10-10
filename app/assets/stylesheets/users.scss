@@ -19,13 +19,18 @@ nav.user-profile-navbar {
   padding: 5px 0;
 }
 
-.nav-logo {
+.nav-logo a {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 45px;
   font-weight: 700;
+}
+
+.nav-logo a:hover {
+  color: gray;
+  transition: .3s;
 }
 
 .nav-logo h1 {
@@ -143,6 +148,13 @@ header.user-profile-header {
   padding: 5px;
   border-radius: 4px;
   width: 170px;
+  text-align: center;
+  box-shadow: 2px 2px 2px;
+  font-size: 12px;
+}
+
+.logout-btn:active {
+  box-shadow: 2px 2px 2px inset;
 }
 
 .pic-username p {

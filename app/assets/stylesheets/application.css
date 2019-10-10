@@ -21,10 +21,19 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  transition: .3s;
+  /* opacity: .5; */
+}
+
 li {
   list-style-type: none;
 }
 
 body {
   background: #f5f2e8;
+}
+
+button {
+  cursor: pointer;
 }

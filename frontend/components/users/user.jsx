@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from "../navbars/navbar_container";
 
 class userProfile extends React.Component {
   constructor(props) {
@@ -20,46 +21,13 @@ class userProfile extends React.Component {
   }
 
   render() {
+    if (!this.props.user) {
+      return null
+    }
+
     return (
       <>
         <div className="user-page-container">
-          <header className="user-profile-header">
-            <nav className="user-profile-navbar">
-              <div className="nav-container">
-                <div className="logo-and-ul">
-                  <div className="nav-logo josefin">
-                    <h1>UNTAPPT</h1>
-                    <h6>DRINK SOCIALLY</h6>
-                  </div>
-                  <ul>
-                    <li>
-                      <a href="#">The Pub</a>
-                    </li>
-                    <li>
-                      <Link to="/breweries">Breweries</Link>
-                    </li>
-                    <li>
-                      <a href="#">Beers</a>
-                    </li>
-                    <li>
-                      <a href="https://github.com/imjeffreylee" target="_blank">
-                        <i className="fab fa-github"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/in/jeffrey-lee-22b94196/" target="_blank">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="pic-username">                
-                  <img src={window.beerProfile} alt="profile"/>
-                    <button className="logout-btn" onClick={this.logOut}>Log Out</button>
-                </div>
-              </div>
-            </nav>
-          </header>
           <section className="profile-body">
             <div className="create-space"></div>
             <div className="profile-body-header">

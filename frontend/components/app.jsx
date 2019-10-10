@@ -9,18 +9,20 @@ import BreweriesIndexContainer from './breweries/brewery_index_container';
 import BreweryShowContainer from './breweries/brewery_show_container';
 import DrinksIndexContainer from './drinks/drink_index_container';
 import DrinkShowContainer from './drinks/drink_show_container';
+import Navbar from './navbars/navbar_container';
 
 const App = () => (
   <>
+    <Navbar />
     <Switch>
       <ProtectedRoute exact path="/drinks/:drinkId" component={DrinkShowContainer} />
       <ProtectedRoute exact path="/drinks" component={DrinksIndexContainer} />
       <ProtectedRoute exact path="/breweries/:breweryId" component={BreweryShowContainer} />
       <ProtectedRoute exact path="/breweries" component={BreweriesIndexContainer} />
       <ProtectedRoute exact path="/users/:userId" component={UserProfileContainer} />
-      <AuthRoute path="/signup" component={SignupFormContainer} />
-      <AuthRoute path="/login" component={LoginFormContainer} />
-      <GreetingsContainer exact path="/" component={GreetingsContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/" component={GreetingsContainer} />
     </Switch>
   </>
 );
