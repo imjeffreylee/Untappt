@@ -85,7 +85,7 @@ TTCL_B = Brewery.create(
 
 OKT_D = Drink.create(
   drink_name: "Samuel Adams OctoberFest",
-  brewery_id: 1,
+  brewery_id: BBC_B.id,
   style: "Märzen",
   ABV: 5.3,
   IBU: 16,
@@ -94,7 +94,7 @@ OKT_D = Drink.create(
 
 STA_D = Drink.create(
   drink_name: "Stella Artois",
-  brewery_id: 2,
+  brewery_id: STA_B.id,
   style: "Lager - Euro Pale",
   ABV: 5,
   IBU: 24,
@@ -103,7 +103,7 @@ STA_D = Drink.create(
 
 HIPA_D = Drink.create(
   drink_name: "Harpoon IPA",
-  brewery_id: 3,
+  brewery_id: HB_B.id,
   style: "IPA - American",
   ABV: 5.9,
   IBU: 42,
@@ -112,7 +112,7 @@ HIPA_D = Drink.create(
 
 one_six_six_four_D = Drink.create(
   drink_name: "1664",
-  brewery_id: 4,
+  brewery_id: KBB_B.id,
   style: "Lager - Euro Pale",
   ABV: 5.5,
   IBU: 20,
@@ -121,7 +121,7 @@ one_six_six_four_D = Drink.create(
 
 ICHI_D = Drink.create(
   drink_name: "Ichiban (Ichiban Shibori) (一番搾り)",
-  brewery_id: 5,
+  brewery_id: KBC_B.id,
   style: "Lager - Pale",
   ABV: 5,
   IBU: 18,
@@ -130,7 +130,7 @@ ICHI_D = Drink.create(
 
 GMTB_D = Drink.create(
   drink_name: "Gold Medal Taiwan Beer",
-  brewery_id: 6,
+  brewery_id: TTCL_B.id,
   style: "Lager - Japanese Rice",
   ABV: 5,
   IBU: 0,
