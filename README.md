@@ -27,28 +27,25 @@ Beer profile: Each beer has its profile page with detailed information, includin
 
 ### User Profile Page
 ![Untappt](feature_screen_shot_1.png)
-User profile page has information regarding the user, including first name, last name
+User profile page has information regarding the user, including first name, last name, username.
 
+### Brewery Index Page
+![Untappt](feature_screenshot_brew_index_2.png)
+Users can browse the brewery list with all breweries in database.
 
+### Brewery Profile Page
+![Untappt](feature_screenshot_brew_show.png)
+Each brewery has a profile page with detailed information.
 
+### Beer Index Page
+![Untappt](feature_screenshot_beer_index.png)
+Users can browse the beer list with all beers in database.
 
+### Beer Profile Page
+![Untappt](feature_screenshot_beer_show.png)
+Each beer has a profile page with detailed information.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Upcoming Features
+-In each beer show page, users will be able to checkin by clicking on the checkin button.
+-User will be able to add other users as friends.
+-User can search beer, breweries, and other users in a search bar.
