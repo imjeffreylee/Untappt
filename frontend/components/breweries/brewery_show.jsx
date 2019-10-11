@@ -36,7 +36,7 @@ class BreweryShow extends React.Component {
                 </div>
                 <div className="rating-and-beer">
                   <div className="brew-rating-avg">
-                    <p>3.45</p>
+                    <p>Rating 3.45</p>
                   </div>
                   <div className="brew-rating-total">
                     <p>5,047,532 Ratings</p>

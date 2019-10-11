@@ -7,7 +7,10 @@ const msp = (state, ownProps) => {
   let drinkId = ownProps.match.params.drinkId;
   let drink = state.entities.drinks[drinkId];
   // debugger
-  let brewery = state.entities.breweries[drink.brewery_id];
+  let brewery;
+  if (drink) {
+    brewery = state.entities.breweries[drink.brewery_id];
+  }
   // debugger
   return {
     drink,
