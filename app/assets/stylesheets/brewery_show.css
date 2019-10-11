@@ -9,6 +9,10 @@
   margin-left: 25px;
 }
 
+.brew-show-info a {
+  color: #c60;
+}
+
 p.brew-type {
   font-size: 1.25em;
   margin-bottom: 6px;
@@ -106,7 +110,6 @@ p.brew-ori {
 .people-like-brew {
   padding: 16px;
   background: #fff;
-  /* border: 1px solid black; */
   font-family: Helvetica, sans-serif;
   font-size: 2.6em;
   color: #333;

@@ -33,7 +33,6 @@ class Api::DrinksController < ApplicationController
 
   def show
     @drink = Drink.find(params[:id])
-    # @brewery = @drink.brewery
     @breweries = Brewery.all
   end
 

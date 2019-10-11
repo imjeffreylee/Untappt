@@ -1,0 +1,17 @@
+.loyal-drinker-box {
+  padding: 16px;
+  background: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.loyal-drinker-box div {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+p.drink-type {
+  color: #888;
+  margin-top: 6px;;
+}

@@ -31,22 +31,25 @@ class DrinkShow extends React.Component {
                   <img src={window.brewery_index} alt="Brew_show" />
                   <div className="brew-show-info">
                     <h2>{this.props.drink.drink_name}</h2>
-                    <Link to={`/breweries/${this.props.drink.brewery_id}`}>{this.props.brewery.brewery_name}</Link>
-                    <p className="brew-type">{this.props.drink.style}</p>
+                    <Link to={`/breweries/${this.props.drink.brewery_id}`}>
+                      {this.props.brewery.brewery_name}
+                      {/* Boston Beer Company */}
+                    </Link>
+                    <p className="drink-type">{this.props.drink.style}</p>
                   </div>
                 </div>
                 <div className="rating-and-beer">
                   <div className="brew-rating-avg">
-                    <p>3.45</p>
+                    <p>{this.props.drink.ABV}% ABV</p>
                   </div>
                   <div className="brew-rating-total">
-                    <p>5,047,532 Ratings</p>
+                    <p>{this.props.drink.IBU} IBU</p>
                   </div>
                   <div className="total-beer">
-                    <Link to="/drinks">764 Beers</Link>
+                    <p>Rating 3.6</p>
                   </div>
                   <div className="claimed">
-                    <img src={window.brew_claimed} alt="claimed" />
+                    <p>360,717 Ratings</p>
                   </div>
                 </div>
                 <div className="desc-links-container">
@@ -81,12 +84,10 @@ class DrinkShow extends React.Component {
                 <p>Propose Edit</p>
                 <p>Propose Duplicate</p>
               </div>
-              <div className="people-like-brew">
+              <div className="loyal-drinker-box">
                 <div>
-                  <p className="people-like-brew-num">187,576</p>
-                  <p>PEOPLE LIKE THIS BREWERY</p>
+                  <p>Loyal Drinkers</p>
                 </div>
-                <a className="like-this-brew">Like This Brewery</a>
               </div>
             </aside>
           </div>
