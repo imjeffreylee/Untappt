@@ -1,1 +1,17 @@
-json.partial! "api/drinks/drink", drink: @drink
+json.set! :drink do
+  json.partial! "api/drinks/drink", drink: @drink
+end
+
+# json.set! :brewery do
+#   json.set! @drink.brewery.id do
+#     json.partial! "/api/breweries/brewery", brewery: @drink.brewery
+#   end
+# end
+
+json.breweries do
+  @breweries.each do |brewery|
+    json.set! brewery.id do
+      json.partial! "api/breweries/brewery", brewery: brewery
+    end
+  end
+end

@@ -4,8 +4,10 @@ import DrinkIndex from "./drink_index"
 
 const msp = (state, ownProps) => {
   let drinks = Object.values(state.entities.drinks)
+  // debugger
   return {
-    drinks
+    drinks,
+    breweries: state.entities.breweries
   };
 };
 

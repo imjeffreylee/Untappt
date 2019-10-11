@@ -64,8 +64,10 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="login-signup">
             <div className="inner-session-form-container">
               <div className="form-header josefin">
-                <h2>UNTAPPT</h2>
-                <h6>DRINK SOCIALLY</h6>
+                <Link to="/">
+                  <h2>UNTAPPT</h2>
+                  <h6>DRINK SOCIALLY</h6>
+                </Link>
               </div>
               {this.renderErrors()}
               <div className="input-holder">
@@ -107,8 +109,10 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="login-signup">
             <div className="inner-session-form-container">
               <div className="form-header josefin">
-                <h2>UNTAPPT</h2>
-                <h6>DRINK SOCIALLY</h6>
+                <Link to="/">
+                  <h2>UNTAPPT</h2>
+                  <h6>DRINK SOCIALLY</h6>
+                </Link>
               </div>
               {this.renderErrors()}
               <div className="input-holder">

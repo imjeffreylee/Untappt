@@ -3,10 +3,15 @@ import { fetchDrink } from "../../actions/drink_actions";
 import DrinkShow from "./drink_show";
 
 const msp = (state, ownProps) => {
+  // debugger
   let drinkId = ownProps.match.params.drinkId;
   let drink = state.entities.drinks[drinkId];
+  // debugger
+  let brewery = state.entities.breweries[drink.brewery_id];
+  // debugger
   return {
-    drink
+    drink,
+    brewery
   };
 };
 

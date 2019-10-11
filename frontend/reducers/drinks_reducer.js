@@ -10,7 +10,6 @@ const DrinksReducer = (state = {}, action) => {
       });
 
     case RECEIVE_DRINKS:
-      // debugger
       return action.drinks;
 
     default:

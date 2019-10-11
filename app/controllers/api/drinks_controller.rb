@@ -19,6 +19,7 @@ class Api::DrinksController < ApplicationController
 
   def index
     @drinks = Drink.all
+    @breweries = Brewery.all
   end
 
   def update
@@ -32,6 +33,8 @@ class Api::DrinksController < ApplicationController
 
   def show
     @drink = Drink.find(params[:id])
+    # @brewery = @drink.brewery
+    @breweries = Brewery.all
   end
 
   private

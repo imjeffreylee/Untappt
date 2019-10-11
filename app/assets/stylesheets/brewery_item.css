@@ -21,7 +21,7 @@
   margin-left: 25px;
 }
 
-.brew-index-text a {
+.brew-index-text a:first-child {
   color: #c60;
   font-size: 20px;
 }
