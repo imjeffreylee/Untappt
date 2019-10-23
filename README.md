@@ -26,7 +26,7 @@ Beer profile: Each beer has its profile page with detailed information, includin
 ## Features Highlights
 
 ### User Profile Page
-![Untappt](feature_screen_shot_1.png)
+![Untappt](./readme_img/feature_screen_shot_1.png)
 
 User profile page has information regarding the user, including first name, last name, username.
 
