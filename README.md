@@ -31,22 +31,22 @@ Beer profile: Each beer has its profile page with detailed information, includin
 User profile page has information regarding the user, including first name, last name, username.
 
 ### Brewery Index Page
-![Untappt](feature_screenshot_brew_index_2.png)
+![Untappt](./readme_img/feature_screenshot_brew_index_2.png)
 
 Users can browse the brewery list with all breweries in database.
 
 ### Brewery Profile Page
-![Untappt](feature_screenshot_brew_show.png)
+![Untappt](./readme_img/feature_screenshot_brew_show.png)
 
 Each brewery has a profile page with detailed information.
 
 ### Beer Index Page
-![Untappt](feature_screenshot_beer_index.png)
+![Untappt](./readme_img/feature_screenshot_beer_index.png)
 
 Users can browse the beer list with all beers in database.
 
 ### Beer Profile Page
-![Untappt](feature_screenshot_beer_show.png)
+![Untappt](./readme_img/feature_screenshot_beer_show.png)
 
 Each beer has a profile page with detailed information.
 
