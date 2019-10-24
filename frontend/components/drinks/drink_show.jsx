@@ -33,7 +33,6 @@ class DrinkShow extends React.Component {
                     <h2>{this.props.drink.drink_name}</h2>
                     <Link to={`/breweries/${this.props.drink.brewery_id}`}>
                       {this.props.brewery.brewery_name}
-                      {/* Boston Beer Company */}
                     </Link>
                     <p className="drink-type">{this.props.drink.style}</p>
                   </div>
@@ -55,6 +54,7 @@ class DrinkShow extends React.Component {
                 <div className="desc-links-container">
                   <p>{this.props.drink.description}</p>
                   <div className="brew-links">
+                    
                   </div>
                 </div>
               </div>

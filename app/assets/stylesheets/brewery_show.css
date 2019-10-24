@@ -151,9 +151,6 @@ p.brew-ori {
 }
 
 .brew-activity-box {
-  width: 100%;
-  /* border: 1px solid black; */
-  height: 100px;
   background-color: #fff;
   padding: 24px;
 }
