@@ -19,7 +19,7 @@ export const createBrewery = (brewery) =>
 
 export const updateBrewery = (brewery) =>
 $.ajax({
-  method: "post",
+  method: "patch",
   url: `api/breweries/${brewery.id}`,
   data: { brewery }
 });

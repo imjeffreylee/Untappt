@@ -3,12 +3,6 @@ import * as DrinkAPIUtil from "../util/drink_api_util";
 export const RECEIVE_DRINK = "RECEIVE_DRINK";
 export const RECEIVE_DRINKS = "RECEIVE_DRINKS";
 
-// export const receiveDrink = drink => {
-//   return {
-//     type: RECEIVE_DRINK,
-//     drink
-//   };
-// };
 export const receiveDrink = payload => {
   return {
     type: RECEIVE_DRINK,
@@ -25,11 +19,6 @@ export const receiveDrinks = payload => {
   };
 };
 
-// export const fetchDrink = id => dispatch => {
-//   return DrinkAPIUtil.fetchDrink(id).then(drink =>
-//     dispatch(receiveDrink(drink))
-//   );
-// };
 export const fetchDrink = id => dispatch => {
   return DrinkAPIUtil.fetchDrink(id).then(payload =>
     dispatch(receiveDrink(payload))
@@ -37,7 +26,6 @@ export const fetchDrink = id => dispatch => {
 };
 
 export const fetchDrinks = () => dispatch => {
-  // debugger
   return DrinkAPIUtil.fetchDrinks().then(payload =>
     dispatch(receiveDrinks(payload))
   );
