@@ -96,14 +96,14 @@ i.fab {
 }
 
 i.fa-github {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 i.fa-linkedin-in {
-  margin-left: 10px;
+  margin-right: 20px;
 }
 
-i.fa-github:hover, i.fa-linkedin-in:hover {
+i.fa-github:hover, i.fa-linkedin-in:hover, i.fa-angellist:hover {
   color: gray;
   transition: .3s;
 }

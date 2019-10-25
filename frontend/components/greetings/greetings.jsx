@@ -26,6 +26,11 @@ const Greeting = () => {
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </span>
+            <span>
+              <a href="https://angel.co/jeffrey-lee-12" target="_blank">
+                <i className="fab fa-angellist"></i>
+              </a>
+            </span>
           </div>
         </div>
         <img className="greeting-phone" src={window.phoneURL} alt="phone"/>
