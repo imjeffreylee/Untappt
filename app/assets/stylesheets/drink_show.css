@@ -18,7 +18,8 @@ p.drink-type {
 
 .drink-links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  align-items: center;
   width: 25%;
 }
 
@@ -29,6 +30,7 @@ p.drink-type {
   width: 52px;
   height: 52px;
   background: #ffcc00;
+  margin-right: 10px;
 }
 
 .drink-links i {
@@ -38,5 +40,10 @@ p.drink-type {
 
 .drink-links i:hover {
   color: gray;
+  transition: .3s;
+}
+
+.drink-links a:hover {
+  background: #F4B800;
   transition: .3s;
 }

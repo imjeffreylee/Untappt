@@ -53,10 +53,10 @@ class DrinkShow extends React.Component {
                 <div className="desc-links-container">
                   <p>{this.props.drink.description}</p>
                   <div className="drink-links">
-                    <a>
+                    <a title="Check-in this beer">
                       <i class="fas fa-check"></i>
                     </a>
-                    <a>
+                    <a title="Add to list">
                       <i class="fas fa-plus"></i>
                     </a>
                   </div>

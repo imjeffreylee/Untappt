@@ -59,6 +59,12 @@
   width: 100%;
 }
 
+.button-holder button:hover {
+  background: #F4B800;
+  transition: .3s;
+  color: gray;
+}
+
 .login-signup button {
   position: absolute;
   top: 0;
