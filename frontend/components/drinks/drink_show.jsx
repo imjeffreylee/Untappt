@@ -11,7 +11,6 @@ class DrinkShow extends React.Component {
 
   componentDidMount() {
     let drinkId = this.props.match.params.drinkId;
-    // debugger
     this.props.fetchDrink(drinkId);
   }
 
@@ -53,8 +52,13 @@ class DrinkShow extends React.Component {
                 </div>
                 <div className="desc-links-container">
                   <p>{this.props.drink.description}</p>
-                  <div className="brew-links">
-                    
+                  <div className="drink-links">
+                    <a>
+                      <i class="fas fa-check"></i>
+                    </a>
+                    <a>
+                      <i class="fas fa-plus"></i>
+                    </a>
                   </div>
                 </div>
               </div>

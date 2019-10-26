@@ -40,10 +40,12 @@ p.brew-ori {
   color: #999;
   line-height: 1.25em;
   font-size: 1.125em;
+  width: 75%;
 }
 
 .desc-links-container {
   margin-top: 16px;
+  display: flex;
 }
 
 .brew-info-and-desc {

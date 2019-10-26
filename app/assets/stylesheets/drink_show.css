@@ -15,3 +15,28 @@ p.drink-type {
   color: #888;
   margin-top: 6px;;
 }
+
+.drink-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25%;
+}
+
+.drink-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: #ffcc00;
+}
+
+.drink-links i {
+  color: #fff;
+  font-size: 2em;
+}
+
+.drink-links i:hover {
+  color: gray;
+  transition: .3s;
+}
