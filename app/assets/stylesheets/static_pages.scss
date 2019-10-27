@@ -50,7 +50,8 @@ h1 {
   display: flex;
   justify-content: flex-end;
   color: white;
-  width: 60%;
+  width: 100vw;
+  max-width: 1024px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -58,7 +59,7 @@ h1 {
 }
 
 .greeting-block img {
-  width: 50%;
+  max-width: 55%;
   height: auto;
 }
 
