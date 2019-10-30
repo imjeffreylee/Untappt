@@ -54,10 +54,10 @@ class DrinkShow extends React.Component {
                   <p>{this.props.drink.description}</p>
                   <div className="drink-links">
                     <a title="Check-in this beer">
-                      <i class="fas fa-check"></i>
+                      <i className="fas fa-check"></i>
                     </a>
                     <a title="Add to list">
-                      <i class="fas fa-plus"></i>
+                      <i className="fas fa-plus"></i>
                     </a>
                   </div>
                 </div>
