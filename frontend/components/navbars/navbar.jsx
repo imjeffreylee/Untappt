@@ -48,6 +48,11 @@ class Navbar extends React.Component {
                       <i className="fab fa-linkedin-in"></i>
                     </a>
                   </li>
+                  <li>
+                    <a href="https://angel.co/jeffrey-lee-12" target="_blank">
+                      <i className="fab fa-angellist"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div className="pic-username">
