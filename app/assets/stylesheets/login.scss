@@ -187,3 +187,7 @@ form.login-signup {
   border-radius: 50%;
   box-sizing: border-box;
 }
+
+::placeholder {
+  color: #ccc; 
+}
