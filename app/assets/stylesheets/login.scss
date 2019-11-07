@@ -55,24 +55,23 @@
 }
 
 .button-holder {
-  position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-holder button:hover {
-  background: #F4B800;
+  background: #FFF;
   transition: .3s;
-  color: gray;
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
 }
 
 .login-signup button, .signup button {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   font-size: 18px;
   width: 100%;
+  max-width: 300px;
   height: 40px;
   color: white;
   background-color: #ffcc00;
@@ -85,7 +84,7 @@
   box-shadow: 2px 2px 2px gray inset;
 }
 
-p.login-signup-switch, p.guest-user {
+p.login-signup-switch {
   font-size: 20px;
   color: grey;
 }
@@ -94,12 +93,12 @@ p.login-signup-switch {
   margin-top: 15px;
 }
 
-p.login-signup-switch a, p.guest-user a {
+p.login-signup-switch a {
   text-decoration: none;
   color: #c60;
 }
 
-p.guest-user a:hover, .login-signup-switch a:hover {
+.login-signup-switch a:hover {
   cursor: pointer;
   opacity: .5;
   transition: .3s;
@@ -147,4 +146,44 @@ form.login-signup {
   border: 1px solid #E25858;
   border-radius: 5px;
   padding: 5px;
+  max-width: 255px;
+}
+
+.guest-user {
+  background: #354d89;
+  padding: 15px 32px;
+  color: #FFF;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px grey;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+
+.guest-user span {
+  font-weight: bold;
+}
+
+.guest-user:hover {
+  color: #354d89;
+  background: #FFF;
+  border: 1px solid #354d89;
+  box-sizing: border-box;
+}
+
+.guest-user:active {
+  box-shadow: 2px 2px 2px gray inset;
+}
+
+.or {
+  font-size: .8em;
+  width: 36px;
+  height: 36px;
+  border: 3px solid #ddd;
+  color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-sizing: border-box;
 }

@@ -70,6 +70,8 @@ class SessionForm extends React.Component {
                 </Link>
               </div>
               {this.renderErrors()}
+              <a className="guest-user" onClick={this.handleGuest}>Browse as a <span>GUEST</span></a>
+              <p className="or">OR</p>
               <div className="input-holder">
                 <div className="icon-input-wrapper">
                   <i className="fas fa-user"></i>
@@ -95,9 +97,6 @@ class SessionForm extends React.Component {
               </div>
               <p className="login-signup-switch">
                 New around here? <Link to="/signUp" onClick={this.props.clearErrors}>Sign up!</Link>
-              </p>
-              <p className="guest-user">
-                or <a onClick={this.handleGuest}>try it as a guest</a>
               </p>
             </div>
           </form>
@@ -170,7 +169,7 @@ class SessionForm extends React.Component {
                 <button>{this.props.formType}</button>
               </div>
               <p className="login-signup-switch">
-                Already have an account? <Link to="/login" onClick={this.props.clearErrors}>Log in</Link>
+                Already have an account? <Link to="/login" onClick={this.props.clearErrors}>Log in!</Link>
               </p>
             </div>
           </form>
