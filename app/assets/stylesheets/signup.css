@@ -1,0 +1,54 @@
+.user-email, .password-confirm-password {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.user-email .icon-input-wrapper, .password-confirm-password .icon-input-wrapper {
+    width: 15em;
+}
+
+.inner-signup-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px 16px;
+    min-height: 500px;
+}
+
+form.signup {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+.brewery-warning {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: .9em;
+    line-height: 1.2em;
+    text-align: center;
+    background: #FFFFAA;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.brewery-warning a {
+    color: #c60;
+    font-weight: bold;
+}
+
+.brewery-warning a:hover {
+    opacity: .6;
+}
+
+.all-fields {
+    font-weight: bold;
+    color: #666;
+    line-height: 1.2em;
+    text-align: center;
+    font-size: .9em;
+}

@@ -15,22 +15,22 @@
   justify-content: center;
 }
 
-.login-signup h2 {
+.login-signup h2, .signup h2 {
   font-size: 60px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  color: black;
+  color: #3f4040;
 }
 
-.login-signup h6 {
+.login-signup h6, .signup h6 {
   letter-spacing: 3px;
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  color: #909090;
 }
 
-.login-signup input {
+.login-signup input, .signup input {
   font-size: 1em;
   padding: 2px 0px 0px 12px;
   box-sizing: border-box;
@@ -47,7 +47,7 @@
   height: 40px;
 }
 
-.fa-user, .fa-unlock {
+.fa-user, .fa-unlock, .fa-envelope {
   color: #a9a9a9;
   margin-left: 12px;
   border-right: 1px solid #a9a9a9;
@@ -65,7 +65,7 @@
   color: gray;
 }
 
-.login-signup button {
+.login-signup button, .signup button {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -81,7 +81,7 @@
   border-radius: 5px;
 }
 
-.login-signup button:active {
+.login-signup button:active, .signup button:active {
   box-shadow: 2px 2px 2px gray inset;
 }
 
@@ -117,7 +117,6 @@ form.login-signup {
 }
 
 .inner-session-form-container {
-  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,12 +137,14 @@ form.login-signup {
 
 .err-msg {
   color: white;
+  list-style-type: none;
+  text-align: center;
+  font-size: 1em;
+}
+
+.err-ul {
   background: #E25858;
   border: 1px solid #E25858;
   border-radius: 5px;
-  list-style-type: none;
   padding: 5px;
-  margin-top: 5px;
-  text-align: center;
-  font-size: 12px;
 }
