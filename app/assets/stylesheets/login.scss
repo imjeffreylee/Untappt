@@ -59,6 +59,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
 }
 
 .button-holder button:hover {
@@ -84,16 +86,12 @@
   box-shadow: 2px 2px 2px gray inset;
 }
 
-p.login-signup-switch {
+.login-signup-switch {
   font-size: 20px;
   color: grey;
 }
 
-p.login-signup-switch {
-  margin-top: 15px;
-}
-
-p.login-signup-switch a {
+.login-signup-switch a {
   text-decoration: none;
   color: #c60;
 }

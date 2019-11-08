@@ -96,7 +96,7 @@ class SessionForm extends React.Component {
                 <button>{this.props.formType}</button>
               </div>
               <p className="login-signup-switch">
-                New around here? <Link to="/signUp" onClick={this.props.clearErrors}>Sign up!</Link>
+                New around here? <Link to="/signup" onClick={this.props.clearErrors}>Sign up!</Link>
               </p>
             </div>
           </form>

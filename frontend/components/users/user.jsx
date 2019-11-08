@@ -36,10 +36,10 @@ class userProfile extends React.Component {
                 <h2>{this.props.user.first_name} {this.props.user.last_name}</h2>
                 <p>{this.props.user.username}</p>
                 <ul className="info-list">
-                  <li>TOTAL</li>
-                  <li>UNIQUE</li>
-                  <li>BADGES</li>
-                  <li>FRIENDS</li>
+                  <li><a href="#">TOTAL</a></li>
+                  <li><a href="#">UNIQUE</a></li>
+                  <li><a href="#">BADGES</a></li>
+                  <li><a href="#">FRIENDS</a></li>
                 </ul>
               </div>
             </div>
@@ -65,6 +65,11 @@ class userProfile extends React.Component {
                   <div className="profile-events-container">
                     <div className="profile-your-events">
                       <h3>Your Events</h3>
+                    </div>
+                  </div>
+                  <div className="profile-events-container">
+                    <div className="profile-top-beers">
+                      <h3>Top Beers</h3>
                     </div>
                   </div>
                 </aside>
