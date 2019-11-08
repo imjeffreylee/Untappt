@@ -1,8 +1,9 @@
 import * as CheckinUtil from "../util/checkin_api_util";
-
 export const RECEIVE_CHECKIN = "RECEIVE_CHECKIN";
 export const RECEIVE_CHECKINS = "RECEIVE_CHECKINS";
 export const DELETE_CHECKIN = "DELETE_CHECKIN";
+
+// action creators
 
 export const receiveCheckins = checkins => {
   return {
@@ -26,6 +27,8 @@ export const deleteCheckin = (checkin) => {
     checkinId: checkin.id
   };
 }
+
+// thunk actions
 
 export const fetchCheckins = () => dispatch => {
   return CheckinUtil.fetchCheckins().then(checkins =>

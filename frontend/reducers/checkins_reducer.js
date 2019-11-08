@@ -1,4 +1,9 @@
-import { RECEIVE_CHECKIN, RECEIVE_CHECKINS } from "../actions/checkin_actions";
+import {
+    RECEIVE_CHECKIN,
+    RECEIVE_CHECKINS,
+    DELETE_CHECKIN
+} from "../actions/checkin_actions";
+
 import { merge } from "lodash/merge";
 
 const CheckinsReducer = (state = {}, action) => {
@@ -12,7 +17,14 @@ const CheckinsReducer = (state = {}, action) => {
         case RECEIVE_CHECKINS:
             return action.checkins;
 
+        case DELETE_CHECKIN:
+            const newSatet = merge({}, state);
+            delete newSatet[action.checkinId];
+            return newState;
+
         default:
             return state;
     }
 }
+
+export default CheckinsReducer;
