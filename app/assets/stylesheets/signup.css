@@ -44,10 +44,14 @@ form.signup {
     opacity: .6;
 }
 
-.all-fields {
+.all-fields, .password-warning {
     font-weight: bold;
     color: #666;
     line-height: 1.2em;
     text-align: center;
     font-size: .9em;
+}
+
+.password-warning {
+    margin-bottom: 13px;
 }

@@ -63,6 +63,10 @@
   border-bottom: 1px solid #ccc;
 }
 
+.button-holder button {
+  font-weight: bold;
+}
+
 .button-holder button:hover {
   background: #FFF;
   transition: .3s;

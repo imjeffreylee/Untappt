@@ -93,7 +93,7 @@ class SessionForm extends React.Component {
                 </div>
               </div>
               <div className="button-holder">
-                <button>{this.props.formType}</button>
+                <button>Log in</button>
               </div>
               <p className="login-signup-switch">
                 New around here? <Link to="/signup" onClick={this.props.clearErrors}>Sign up!</Link>
@@ -144,6 +144,9 @@ class SessionForm extends React.Component {
                     />
                   </div>
                 </div>
+                <p className="password-warning">
+                  Avoid using common words and include a mix of letters and numbers.
+                </p>
                 <div className="password-confirm-password">
                   <div className="icon-input-wrapper">
                     <i className="fas fa-unlock"></i>
@@ -166,7 +169,7 @@ class SessionForm extends React.Component {
                 </div>
               </div>
               <div className="button-holder">
-                <button>{this.props.formType}</button>
+                <button>Create Account</button>
               </div>
               <p className="login-signup-switch">
                 Already have an account? <Link to="/login" onClick={this.props.clearErrors}>Log in!</Link>
