@@ -20,9 +20,10 @@ export const receiveCheckin = payload => {
   }
 }
 
-export const deleteCheckin = () => {
+export const deleteCheckin = (checkin) => {
   return {
-    type: DELETE_CHECKIN
+    type: DELETE_CHECKIN,
+    checkinId: checkin.id
   };
 }
 
@@ -35,4 +36,16 @@ export const fetchCheckin = (id) => dispatch => {
   return CheckinUtil.fetchCheckin(id).then(payload =>
     dispatch(receiveCheckin(payload))
   );
+}
+
+export const createCheckin = (checkin) => {
+  return CheckinUtil.createCheckin(checkin).then(payload =>
+    dispatch(receiveCheckin(payload))
+  )
+}
+
+export const removeCheckin = (id) => {
+  return CheckinUtil.removeCheckin(id).then(checkin =>
+    dispatch(deleteCheckin(checkin))
+  )
 }

@@ -10,6 +10,8 @@ class Api::CheckinsController < ApplicationController
 
   def show
     @checkin = Checkin.find(params[:id])
+    @drinks = Drink.all
+    @breweries = Brewery.all
   end
 
   def destroy
