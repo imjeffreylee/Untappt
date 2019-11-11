@@ -47,14 +47,20 @@ class userProfile extends React.Component {
               <div className="photo-aside-wrapper">
                 <div className="profile-body-pic-box">
                   <div className="img-box">
-                    <img src={window.fakeDemo} alt="fake-data-img"/>
+                    <img src={window.fakeDemo1} alt="fake-data-img1"/>
                   </div>
                   <div className="img-box">
                     <img src={window.fakeDemo2} alt="fake-data-img2" />
                   </div>
-                  <div className="img-box"></div>
-                  <div className="img-box"></div>
-                  <div className="img-box"></div>
+                  <div className="img-box">
+                    <img src={window.fakeDemo3} alt="fake-data-img3"/>
+                  </div>
+                  <div className="img-box">
+                    <img src={window.fakeDemo4} alt="fake-data-img4" />
+                  </div>
+                  <div className="img-box">
+                    <img src={window.fakeDemo5} alt="fake-data-img5" />
+                  </div>
                 </div>
                 <aside className="profile-sidebar">
                   <div className="profile-lists-container">

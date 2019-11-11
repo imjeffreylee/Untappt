@@ -177,7 +177,7 @@ header.user-profile-header {
 }
 
 .profile-body-pic-box {
-  width: 67%;
+  width: 65%;
   display: flex;
   max-height: 129.2px;
 }
@@ -201,6 +201,7 @@ aside.profile-sidebar {
 
 .photo-aside-wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .profile-lists, .profile-your-events, .profile-top-beers {
