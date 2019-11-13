@@ -9,6 +9,8 @@ User.destroy_all
 Brewery.destroy_all
 Drink.destroy_all
 
+#### Users seeds
+
 guest = User.create(
   username: "guest",
   password: "password",
@@ -32,6 +34,10 @@ guest2 = User.create(
   country: "USA",
   birthday: "02/02/1987"
 )
+
+#### Users seeds end
+
+####
 
 #### Breweries seeds
 
@@ -77,7 +83,7 @@ TTCL_B = Brewery.create(
   brewery_description: "Taiwanese brewery."
 )
 
-#### Breweries seeds
+#### Breweries seeds end
 
 ####
 
@@ -137,3 +143,15 @@ GMTB_D = Drink.create(
   description: "Most popular beer in Taiwan."
 )
 
+#### Drinks seeds end
+
+####
+
+#### Checkins seeds
+
+Checkin1 = Checkin.create(
+  user_id: guest.id,
+  drink_id: one_six_six_four_D.id,
+  rating: 1,
+  review: "I'm not sure I'm drinking water or beer."
+)
