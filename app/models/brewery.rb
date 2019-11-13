@@ -10,4 +10,5 @@ class Brewery < ApplicationRecord
   has_many :checkins,
     through: :drinks,
     source: :checkins
+    
 end
