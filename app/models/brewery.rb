@@ -6,4 +6,8 @@ class Brewery < ApplicationRecord
             presence: true
 
   has_many :drinks
+  
+  has_many :checkins,
+    through: :drinks,
+    source: :checkins
 end
