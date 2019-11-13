@@ -155,3 +155,5 @@ Checkin1 = Checkin.create(
   rating: 1,
   review: "I'm not sure I'm drinking water or beer."
 )
+
+#### Checkins seeds end

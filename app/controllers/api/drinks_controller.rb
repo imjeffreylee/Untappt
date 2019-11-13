@@ -1,4 +1,16 @@
 class Api::DrinksController < ApplicationController
+  def index
+    @drinks = Drink.all.includes(:brewery, :checkins)
+    @breweries = Brewery.all
+  end
+
+  def show
+    @drink = Drink.find(params[:id]).includes(:brewery, :checkins)
+    @brewery = @drink.brewery
+    @checkins = @drink.checkins
+    @breweries = Brewery.all
+  end
+  
   def create
     @drink = Drink.new(drink_params)
     if @drink.save
@@ -17,10 +29,6 @@ class Api::DrinksController < ApplicationController
     end
   end
 
-  def index
-    @drinks = Drink.all
-    @breweries = Brewery.all
-  end
 
   def update
     @drink = Drink.find(params[:id])
@@ -29,11 +37,6 @@ class Api::DrinksController < ApplicationController
     else
       render json: @drink.errors.full_messages, status: 422
     end
-  end
-
-  def show
-    @drink = Drink.find(params[:id])
-    @breweries = Brewery.all
   end
 
   private

@@ -1,10 +1,12 @@
 class Api::BreweriesController < ApplicationController
   def index
-    @breweries = Brewery.all
+    @breweries = Brewery.all.includes(:checkins, :drinks)
   end
 
   def show
-    @brewery = Brewery.find(params[:id])
+    @brewery = Brewery.find(params[:id]).includes(:drinks, :checkins)
+    @drinks = @brewery.drinks
+    @checkins = @brewery.checkins
   end
 
   def create
