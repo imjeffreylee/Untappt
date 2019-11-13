@@ -1,4 +1,13 @@
 class Api::UsersController < ApplicationController
+  def index
+    @users = User.all.includes(:checkins)
+  end
+  
+  def show
+    @user = User.find(params[:id]).includes(:checkins)
+    @checkins = @user.checkins
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -7,14 +16,6 @@ class Api::UsersController < ApplicationController
     else
       render json: @user.errors.full_messages, status: 422
     end
-  end
-
-  def show
-    @user = User.find(params[:id])
-  end
-
-  def index
-    @users = User.all
   end
 
   private

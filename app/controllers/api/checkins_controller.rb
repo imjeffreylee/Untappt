@@ -9,9 +9,10 @@ class Api::CheckinsController < ApplicationController
   end
 
   def show
-    @checkin = Checkin.find(params[:id])
-    @drinks = Drink.all
-    @breweries = Brewery.all
+    @checkin = Checkin.find(params[:id]).includes(:user, :drink)
+    @user = @checkin.user
+    @drink = @checkin.drink
+    @brewery = @drink.brewery
   end
 
   def destroy
