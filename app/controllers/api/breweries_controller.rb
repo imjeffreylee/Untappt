@@ -4,7 +4,7 @@ class Api::BreweriesController < ApplicationController
   end
 
   def show
-    @brewery = Brewery.find(params[:id]).includes(:drinks, :checkins)
+    @brewery = Brewery.includes(:drinks, :checkins).find(params[:id])
     @drinks = @brewery.drinks
     @checkins = @brewery.checkins
   end
