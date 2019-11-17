@@ -16,7 +16,7 @@ Beer profile: Each beer has its profile page with detailed information, includin
 ### Backend
 - Ruby 2.5.1
 - Rails 5.2.3
-- Postgresql
+- PostgreSQL
 
 ### Frontend
 - React
