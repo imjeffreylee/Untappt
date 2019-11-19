@@ -1,0 +1,19 @@
+current directory: /Users/imjeffreylee/Desktop/projects/untappt/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.13/ext/mri
+/Users/imjeffreylee/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20191119-27179-1dckhin.rb extconf.rb
+creating Makefile
+
+current directory: /Users/imjeffreylee/Desktop/projects/untappt/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR=" clean
+
+current directory: /Users/imjeffreylee/Desktop/projects/untappt/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+clang  -D__SKIP_GNU -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -c -o x86.o x86.S
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.bundle
+
+current directory: /Users/imjeffreylee/Desktop/projects/untappt/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20191119-27179-1f4bowv

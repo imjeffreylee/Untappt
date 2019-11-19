@@ -1,0 +1,208 @@
+have_header: checking for ruby/st.h... -------------------- yes
+
+"clang -o conftest -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"clang -E -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/st.h>
+/* end */
+
+--------------------
+
+have_header: checking for st.h... -------------------- yes
+
+"clang -E -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+In file included from conftest.c:3:
+/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward/st.h:2:2: warning: use "ruby/st.h" instead of bare "st.h" [-W#warnings]
+#warning use "ruby/st.h" instead of bare "st.h"
+ ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <st.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_str_replace() in ruby.h... -------------------- yes
+
+"clang -o conftest -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_str_replace; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_intern_str() in ruby.h... -------------------- yes
+
+"clang -o conftest -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_intern_str; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_sym2str() in ruby.h... -------------------- yes
+
+"clang -o conftest -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_sym2str; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_str_intern() in ruby.h... -------------------- yes
+
+"clang -o conftest -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_str_intern; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_block_lambda() in ruby.h... -------------------- yes
+
+"clang -o conftest -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_block_lambda; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_hash_dup() in ruby.h... -------------------- yes
+
+"clang -o conftest -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_dup; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_hash_clear() in ruby.h... -------------------- yes
+
+"clang -o conftest -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18 -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/imjeffreylee/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib -L. -L/Users/imjeffreylee/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_clear; return !p; }
+/* end */
+
+--------------------
+
