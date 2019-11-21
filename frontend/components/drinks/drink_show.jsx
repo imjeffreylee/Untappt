@@ -53,7 +53,7 @@ class DrinkShow extends React.Component {
                 <div className="desc-links-container">
                   <p>{this.props.drink.description}</p>
                   <div className="drink-links">
-                    <a title="Check-in this beer">
+                    <a title="Check-in this beer" onClick={() => this.props.launchModal("checkin")}>
                       <i className="fas fa-check"></i>
                     </a>
                     <a title="Add to list">

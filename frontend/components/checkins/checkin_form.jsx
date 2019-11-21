@@ -25,9 +25,11 @@ class CheckinForm extends React.Component {
         this.props.createCheckin(this.state.drink_id, this.state).then(() => this.props.closeModal());
     }
 
-    // render() {
-    //     return (
-
-    //     )
-    // }
+    render() {
+        return (
+            <div className="checkin-container">
+                
+            </div>
+        )
+    }
 }
