@@ -7,7 +7,7 @@ const Modal = (props) => {
     if (!props.modal) {
         return null;
     }
-
+// debugger
     return (
         <div className="modal-background" onClick={props.closeModal}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -17,12 +17,12 @@ const Modal = (props) => {
     )
 }
 
-const msp = state => {
+const msp = state => ({
     modal: state.ui.modal
-};
+});
 
-const mdp = dispatch => {
+const mdp = dispatch => ({
     closeModal: () => dispatch(closeModal())
-};
+});
 
 export default connect(msp, mdp)(Modal);

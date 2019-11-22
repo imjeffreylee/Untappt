@@ -28,8 +28,10 @@ class CheckinForm extends React.Component {
     render() {
         return (
             <div className="checkin-container">
-                
+                <h1>Hello World</h1>
             </div>
         )
     }
 }
+
+export default CheckinForm;
