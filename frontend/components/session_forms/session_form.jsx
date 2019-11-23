@@ -167,6 +167,24 @@ class SessionForm extends React.Component {
                     />
                   </div>
                 </div>
+                <div className="first-last-name">
+                  <div className="icon-input-wrapper">
+                    <input type="text"
+                      value={this.state.first_name}
+                      onChange={this.update('first_name')}
+                      placeholder="First name"
+                      className="input-first-name"
+                    />
+                  </div>
+                  <div className="icon-input-wrapper">
+                    <input type="text"
+                      value={this.state.last_name}
+                      onChange={this.update('last_name')}
+                      placeholder="Last name"
+                      className="input-last-name"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="button-holder">
                 <button>Create Account</button>

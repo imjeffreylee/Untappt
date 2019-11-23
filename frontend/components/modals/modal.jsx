@@ -7,7 +7,7 @@ const Modal = (props) => {
     if (!props.modal) {
         return null;
     }
-// debugger
+
     return (
         <div className="modal-background" onClick={props.closeModal}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
