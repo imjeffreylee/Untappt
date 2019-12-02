@@ -1,16 +1,29 @@
+import React from "react"
+
 class CheckinIndexItem extends React.Component {
-    
+    constructor(props) {
+        super(props);
+        // this.state = {
+
+        // }
+    }
 
     render() {
         return (
             <>
                 <div className="index-item-container">
-                    <div className="img-holder">
+                    <div className="checkin-item-img-holder">
                         <img src={window.beerProfile} alt="profile" />
                     </div>
                     <div className="checkin-info-holder">
                         <div className="top-part">
-                            <p>FirstName LastName is drinking a Beer by Brewery</p>
+                            <p>
+                                <a className="fname">FirstName LastName </a>
+                                is drinking a
+                                <a className="beer"> Beer </a>
+                                by
+                                <a className="brewery"> Brewery</a>
+                            </p>
                             <div className="comment">
                                 <p className="comment-text">Good!</p>
                                 <div className="caps"></div>
@@ -18,11 +31,11 @@ class CheckinIndexItem extends React.Component {
                         </div>
                         <div className="bottom-part">
                             <div className="comment-toast">
-                                <div className="comment-btn">
-                                    <a href="">Comment</a>
+                                <div className="comment-btn btn">
+                                    <a href="#">Comment</a>
                                 </div>
-                                <div className="toast-btn">
-                                    <a href="">Toast</a>
+                                <div className="toast-btn btn">
+                                    <a href="#">Toast</a>
                                 </div>
                             </div>
                         </div>

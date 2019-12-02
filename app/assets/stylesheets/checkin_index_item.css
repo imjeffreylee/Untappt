@@ -1,0 +1,42 @@
+.index-item-container {
+    display: flex;
+}
+
+.checkin-item-img-holder {
+    margin-right: 12px;
+}
+
+.top-part p {
+    font-size: 1.125em;
+    line-height: 1.2em;
+    margin-bottom: 16px;
+}
+
+.top-part p a {
+    color: #c60;
+}
+
+.top-part p a:hover {
+    opacity: .5;
+}
+
+.comment-toast {
+    display: flex;
+}
+
+.btn {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.btn a {
+    color: #fff;
+}
+
+.toast-btn {
+    background-color: #ffcc00;
+}
+
+.comment-btn {
+    background: #a7a7a7;
+}

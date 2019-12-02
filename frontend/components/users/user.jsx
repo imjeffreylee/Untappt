@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../navbars/navbar_container";
+import CheckinIndexItem from "../checkins/checkin_index_item";
 
 class userProfile extends React.Component {
   constructor(props) {
@@ -54,22 +53,28 @@ class userProfile extends React.Component {
               </div>
             </div>
             <section className="profile-body-content">
-              <div className="photo-aside-wrapper">
-                <div className="profile-body-pic-box">
-                  <div className="img-box">
-                    <img src={window.fakeDemo1} alt="fake-data-img1" />
+              <div className="profile-body-content-container">
+                <div className="profile-body-content-main">
+                  <div className="profile-body-pic-box">
+                    <div className="img-box">
+                      <img src={window.fakeDemo1} alt="fake-data-img1" />
+                    </div>
+                    <div className="img-box">
+                      <img src={window.fakeDemo2} alt="fake-data-img2" />
+                    </div>
+                    <div className="img-box">
+                      <img src={window.fakeDemo3} alt="fake-data-img3" />
+                    </div>
+                    <div className="img-box">
+                      <img src={window.fakeDemo4} alt="fake-data-img4" />
+                    </div>
+                    <div className="img-box">
+                      <img src={window.fakeDemo5} alt="fake-data-img5" />
+                    </div>
                   </div>
-                  <div className="img-box">
-                    <img src={window.fakeDemo2} alt="fake-data-img2" />
-                  </div>
-                  <div className="img-box">
-                    <img src={window.fakeDemo3} alt="fake-data-img3" />
-                  </div>
-                  <div className="img-box">
-                    <img src={window.fakeDemo4} alt="fake-data-img4" />
-                  </div>
-                  <div className="img-box">
-                    <img src={window.fakeDemo5} alt="fake-data-img5" />
+                  <div className="profile-checkin-feeds">
+                    <h2>Your Recent Activity</h2>
+                    <CheckinIndexItem />
                   </div>
                 </div>
                 <aside className="profile-sidebar">
@@ -90,9 +95,9 @@ class userProfile extends React.Component {
                   </div>
                 </aside>
               </div>
-              <div className="profile-checkin-feeds">
-                {/* <CheckinIndex /> */}
-              </div>
+              {/* <div className="profile-checkin-feeds">
+                <CheckinIndexItem />
+              </div> */}
             </section>
           </section>
         </div>
