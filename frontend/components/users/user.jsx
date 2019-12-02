@@ -74,7 +74,9 @@ class userProfile extends React.Component {
                   </div>
                   <div className="profile-checkin-feeds">
                     <h2>Your Recent Activity</h2>
-                    <CheckinIndexItem />
+                    <CheckinIndexItem
+                      checkinUser={this.props.user}
+                      />
                   </div>
                 </div>
                 <aside className="profile-sidebar">
@@ -95,9 +97,6 @@ class userProfile extends React.Component {
                   </div>
                 </aside>
               </div>
-              {/* <div className="profile-checkin-feeds">
-                <CheckinIndexItem />
-              </div> */}
             </section>
           </section>
         </div>

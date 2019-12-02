@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
+import { Link } from "react-router-dom";
 
 class CheckinIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-
-        // }
     }
 
     render() {
+        const user = this.props.checkinUser;
+
         return (
             <>
                 <div className="index-item-container">
@@ -18,7 +18,7 @@ class CheckinIndexItem extends React.Component {
                     <div className="checkin-info-holder">
                         <div className="top-part">
                             <p>
-                                <a className="fname">FirstName LastName </a>
+                                <Link to={`/users/${user.id}`}>{user.first_name} {user.last_name} </Link>
                                 is drinking a
                                 <a className="beer"> Beer </a>
                                 by
@@ -31,19 +31,22 @@ class CheckinIndexItem extends React.Component {
                         </div>
                         <div className="bottom-part">
                             <div className="comment-toast">
-                                <div className="comment-btn btn">
-                                    <a href="#">Comment</a>
-                                </div>
-                                <div className="toast-btn btn">
-                                    <a href="#">Toast</a>
-                                </div>
+                                <a href="#" className="comment-btn btn">
+                                    <img src={window.comment_icon} alt="comment_icon"/>
+                                    Comment
+                                </a>
+                                <a href="#" className="toast-btn btn">
+                                    <img src={window.toast_icon} alt="comment_icon" />
+                                    Toast
+                                </a>
+                            </div>
+                            <div className="item-footer">
+                                <a href="#" className="post-date item-footer-link">28 Nov 19</a>
+                                <a href="#" className="post-detail item-footer-link">View Detailed Check-in</a>
+                                <a href="#" className="delete-post item-footer-link">Delete Check-in</a>
                             </div>
                         </div>
-                        <div className="item-footer">
-                            <a href="">checkin time</a>
-                            <a href="">View Detailed Check-in</a>
-                            <a href="">Delete Check-in</a>
-                        </div>
+                        <div className="toast-list"></div>
                     </div>
                 </div>
             </>
