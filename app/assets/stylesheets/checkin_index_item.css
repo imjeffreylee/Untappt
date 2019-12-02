@@ -1,0 +1,92 @@
+.index-item-container {
+    display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 24px;
+}
+
+.checkin-item-img-holder {
+    margin-right: 12px;
+}
+
+.top-part > p {
+    font-size: 1.125em;
+    line-height: 1.2em;
+    margin-bottom: 16px;
+}
+
+.top-part > div {
+    margin-bottom: 12px;
+}
+
+.top-part p a {
+    color: #c60;
+}
+
+.top-part p a:hover,
+.post-date:hover,
+.post-detail:hover,
+.delete-post:hover
+{
+    opacity: .5;
+}
+
+.comment-toast {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+a.btn {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 18px;
+    border-radius: 4px;
+    background: #a7a7a7;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.2);
+}
+
+a.btn:hover {
+    background: rgb(134, 135, 135);
+}
+
+a.btn:active {
+    background: rgb(96, 96, 96);
+}
+
+.btn img {
+    max-height: 25px;
+    margin-right: 10px;
+}
+
+.toast-btn {
+    margin-left: 8px;
+}
+
+.comment-btn {
+    margin-right: 8px;
+}
+
+.checkin-info-holder {
+    width: 80%;
+}
+
+.item-footer-link {
+    font-size: .8em;
+    margin-right: 12px;
+}
+
+.post-date {
+    color: #999;
+}
+
+.post-detail, .delete-post {
+    color: #c60;
+}
+
+.bottom-part {
+    margin-bottom: 30px;
+}

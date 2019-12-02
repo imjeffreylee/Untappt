@@ -1,9 +1,12 @@
-.user-email, .password-confirm-password {
+.user-email, .password-confirm-password, .first-last-name {
     display: flex;
     justify-content: space-evenly;
 }
 
-.user-email .icon-input-wrapper, .password-confirm-password .icon-input-wrapper {
+.user-email .icon-input-wrapper,
+.password-confirm-password .icon-input-wrapper,
+.first-last-name .icon-input-wrapper
+{
     width: 15em;
 }
 

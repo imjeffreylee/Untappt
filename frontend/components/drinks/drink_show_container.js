@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { fetchDrink } from "../../actions/drink_actions";
+import { launchModal } from "../../actions/modal_actions";
 import DrinkShow from "./drink_show";
 
 const msp = (state, ownProps) => {
@@ -19,7 +20,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return {
-    fetchDrink: id => dispatch(fetchDrink(id))
+    fetchDrink: id => dispatch(fetchDrink(id)),
+    launchModal: (modal) => dispatch(launchModal(modal))
   };
 };
 

@@ -101,12 +101,20 @@ section.profile-body {
   align-items: flex-end;
 }
 
-.profile-body-header img {
-  height: 80px;
-  width: 80px;
+.profile-body-header img, .checkin-item-img-holder img {
   border: 2px solid white;
   border-radius: 100%;
   margin: 0 0 30px 20px;
+}
+
+.profile-body-header img {
+  height: 80px;
+  width: 80px;
+}
+
+.checkin-item-img-holder img {
+  height: 52px;
+  width: 52px;
 }
 
 header.user-profile-header {
@@ -177,9 +185,11 @@ header.user-profile-header {
 }
 
 .profile-body-pic-box {
-  width: 65%;
+  width: 100%;
+  height: 100%;
   display: flex;
   max-height: 129.2px;
+  margin-bottom: 16px;
 }
 
 .img-box img {
@@ -196,10 +206,10 @@ header.user-profile-header {
 }
 
 aside.profile-sidebar {
-  width: 33%;
+  width: 29%;
 }
 
-.photo-aside-wrapper {
+.profile-body-content-container {
   display: flex;
   justify-content: space-between;
 }
@@ -224,6 +234,25 @@ aside.profile-sidebar {
 
 .profile-body-content {
   margin-top: 16px;
+}
+
+.profile-body-content-main {
+  width: 68%;
+}
+
+.profile-checkin-feeds {
+  background: #fff;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.profile-checkin-feeds h2 {
+  font-weight: 600;
+  font-size: 1.4em;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 @media only screen and (max-width: 900px) {
