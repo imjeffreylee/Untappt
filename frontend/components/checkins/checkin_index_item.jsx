@@ -7,8 +7,9 @@ class CheckinIndexItem extends React.Component {
     }
 
     render() {
-        const user = this.props.checkinUser;
-
+        const user = this.props.user;
+        
+        debugger
         return (
             <>
                 <div className="index-item-container">

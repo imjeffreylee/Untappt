@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { logout, fetchUser } from "../../actions/session_actions";
+import { fetchCheckins } from "../../actions/checkin_actions";
 import userProfile from "./user";
 
 const msp = (state, ownProps) => {
@@ -13,7 +14,8 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => {
   return {
     logout: () => dispatch(logout()),
-    fetchUser: (id) => dispatch(fetchUser(id))
+    fetchUser: (id) => dispatch(fetchUser(id)),
+    fetchCheckins: () => dispatch(fetchCheckins())
   };
 };
 

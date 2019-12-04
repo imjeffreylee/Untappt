@@ -1,14 +1,14 @@
 import * as CheckinUtil from "../util/checkin_api_util";
 export const RECEIVE_CHECKIN = "RECEIVE_CHECKIN";
 export const RECEIVE_CHECKINS = "RECEIVE_CHECKINS";
-export const DELETE_CHECKIN = "DELETE_CHECKIN";
+export const REMOVE_CHECKIN = "REMOVE_CHECKIN";
 
 // action creators
 
 export const receiveCheckins = checkins => {
   return {
     type: RECEIVE_CHECKINS,
-    checkins: checkins
+    checkins
   }
 }
 
@@ -21,9 +21,9 @@ export const receiveCheckin = payload => {
   }
 }
 
-export const deleteCheckin = (checkin) => {
+export const removeCheckin = (checkin) => {
   return {
-    type: DELETE_CHECKIN,
+    type: REMOVE_CHECKIN,
     checkinId: checkin.id
   };
 }
@@ -47,8 +47,8 @@ export const createCheckin = (checkin) => {
   )
 }
 
-export const removeCheckin = (id) => {
-  return CheckinUtil.removeCheckin(id).then(checkin =>
-    dispatch(deleteCheckin(checkin))
+export const deleteCheckin = (id) => {
+  return CheckinUtil.deleteCheckin(id).then(checkin =>
+    dispatch(removeCheckin(checkin))
   )
 }

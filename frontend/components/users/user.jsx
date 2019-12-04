@@ -1,5 +1,5 @@
 import React from "react";
-import CheckinIndexItem from "../checkins/checkin_index_item";
+import CheckinIndex from "../checkins/checkin_index";
 
 class userProfile extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class userProfile extends React.Component {
 
   componentDidMount() {
     let userId = this.props.match.params.userId;
-    this.props.fetchUser(userId);
+    this.props.fetchUser(userId).then(() => this.props.fetchCheckins());
   }
 
   logOut({ logout }) {
@@ -20,10 +20,10 @@ class userProfile extends React.Component {
   }
 
   render() {
-    if (!this.props.user) {
+    if (!this.props.user || !this.props.user.checkins) {
       return null;
     }
-
+// debugger
     return (
       <>
         <div className="user-page-container">
@@ -74,7 +74,7 @@ class userProfile extends React.Component {
                   </div>
                   <div className="profile-checkin-feeds">
                     <h2>Your Recent Activity</h2>
-                    <CheckinIndexItem
+                    <CheckinIndex
                       checkinUser={this.props.user}
                       />
                   </div>

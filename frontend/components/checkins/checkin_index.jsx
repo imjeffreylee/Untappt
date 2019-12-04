@@ -2,31 +2,29 @@ import React from "react";
 import CheckinIndexItem from "./checkin_index_item";
 
 class CheckinIndex extends React.Component {
-
-
+    constructor(props) {
+        super(props);
+        debugger
+    }
+    
     render() {
-        const allCheckins = this.props.checkins.map(checkin => {
+        
+        const allCheckins = this.props.checkinUser.checkins.map((checkin, i) => {
+            const user = this.props.checkinUser
+            const drinkId = this.props.checkinUser.checkins[i].id.drink_id;
+            debugger
             return (
                 <CheckinIndexItem
-                    key={checkin.id}
-                    checkin={checkin}
-                    checkinUser={this.props.users[checkin.user_id]}
-                    checkinDrink={this.props.drinks[checkin.drink_id]}
-                    checkinBrewery={this.props.breweries[checkin.breweryId.id]}
-                    likeCheckin={this.props.likeCheckin}
-                    dislikeCheckin={this.props.dislikeCheckin}
-                    createComment={this.props.createComment}
-                    deleteComment={this.props.deleteComment}
-                    users={this.props.users}
+                    key={checkin.id.id}
+                    user={user}
+                    drinkId={drinkId}
                 />
             )
         })
 
         return (
             <>
-                <div className="checkin-feeds">
-                    <CheckinIndexItem />
-                </div>
+                {allCheckins}
             </>
         );
     }

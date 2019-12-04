@@ -18,7 +18,7 @@ class DrinkShow extends React.Component {
     if (!this.props.drink) {
       return null
     }
-    
+
     return (
       <>
         <section className="profile-body">

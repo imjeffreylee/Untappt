@@ -10,7 +10,7 @@ const msp = (state, ownProps) => {
   let brewery;
   if (drink) {
     brewery = state.entities.breweries[drink.brewery_id];
-  }
+  };
   
   return {
     drink,
