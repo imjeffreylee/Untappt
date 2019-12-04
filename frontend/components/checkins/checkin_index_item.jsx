@@ -8,8 +8,9 @@ class CheckinIndexItem extends React.Component {
 
     render() {
         const user = this.props.user;
+        const drink = this.props.drink;
+        const brewery = this.props.brewery;
         
-        debugger
         return (
             <>
                 <div className="index-item-container">

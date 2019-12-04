@@ -4,22 +4,25 @@ import CheckinIndexItem from "./checkin_index_item";
 class CheckinIndex extends React.Component {
     constructor(props) {
         super(props);
-        debugger
     }
     
     render() {
-        
-        const allCheckins = this.props.checkinUser.checkins.map((checkin, i) => {
+        debugger
+        const allCheckins = Object.values(this.props.checkins).map((checkin, i) => {
             const user = this.props.checkinUser
-            const drinkId = this.props.checkinUser.checkins[i].id.drink_id;
-            debugger
-            return (
-                <CheckinIndexItem
-                    key={checkin.id.id}
-                    user={user}
-                    drinkId={drinkId}
-                />
-            )
+            if (i > 0) {
+                const drink = checkin.drink
+                const brewery = checkin.brewery
+                
+                return (
+                    <CheckinIndexItem
+                        key={checkin.checkin.id}
+                        user={user}
+                        drink={drink}
+                        brewery={brewery}
+                    />
+                )
+            }
         })
 
         return (
