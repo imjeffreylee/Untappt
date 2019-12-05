@@ -21,7 +21,7 @@ export const receiveCheckin = payload => {
   }
 }
 
-export const removeCheckin = (checkin) => {
+export const removeCheckin = checkin => {
   return {
     type: REMOVE_CHECKIN,
     checkinId: checkin.id

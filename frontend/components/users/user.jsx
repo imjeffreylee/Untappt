@@ -6,14 +6,13 @@ class userProfile extends React.Component {
     super(props);
     this.state = {
       userId: this.props.match.params.userId,
-      checkins: null
     };
     this.logOut = this.logOut.bind(this);
   }
 
   componentDidMount() {
     let userId = this.props.match.params.userId;
-    this.props.fetchUser(userId);  //.then(() => this.props.fetchCheckins());
+    this.props.fetchUser(userId);
     this.props.fetchCheckins()
       .then(checkins => this.setState(checkins));
   }
@@ -26,7 +25,11 @@ class userProfile extends React.Component {
     if (!this.props.user || !this.state.checkins) {
       return null;
     }
-debugger
+
+    const allCheckins = Object.values(this.state.checkins);
+    const currentUserId = parseInt(this.state.userId);
+    const userCheckins = allCheckins.filter(checkin => checkin.checkin.user_id === currentUserId);
+// debugger
     return (
       <>
         <div className="user-page-container">
@@ -79,7 +82,7 @@ debugger
                     <h2>Your Recent Activity</h2>
                     <CheckinIndex
                       checkinUser={this.props.user}
-                      checkins={this.state.checkins}
+                      checkins={userCheckins}
                       />
                   </div>
                 </div>

@@ -179,10 +179,10 @@ checkin4 = Checkin.create(
 )
 
 checkin5 = Checkin.create(
-  user_id: guest.id,
+  user_id: guest2.id,
   drink_id: drink5.id,
   rating: 3,
-  review: "It was okay."
+  review: "It was not okay."
 )
 
 checkin6 = Checkin.create(
@@ -190,6 +190,13 @@ checkin6 = Checkin.create(
   drink_id: drink6.id,
   rating: 2,
   review: "I drink it only when there are no other choices."
+)
+
+checkin7 = Checkin.create(
+  user_id: guest.id,
+  drink_id: drink6.id,
+  rating: 5,
+  review: "This was just created."
 )
 
 #### Checkins seeds end

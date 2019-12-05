@@ -11,7 +11,17 @@ class CheckinIndexItem extends React.Component {
         const drink = this.props.drink;
         const brewery = this.props.brewery;
         const review = this.props.review;
-        
+        const rating = this.props.rating;
+        let dayAndTime = this.props.dayAndTime;
+        const day = dayAndTime.split("T")[0];
+        const time = dayAndTime.split("T")[1].slice(0, 8);
+        const hour = parseInt(time.split(":")[0]);
+        if (hour < 12) {
+            dayAndTime = day + " " + time + " AM";
+        } else {
+            dayAndTime = day + " " + time + " PM";
+        }
+// debugger
         return (
             <>
                 <div className="index-item-container">
@@ -23,13 +33,16 @@ class CheckinIndexItem extends React.Component {
                             <p>
                                 <Link to={`/users/${user.id}`}>{user.first_name} {user.last_name} </Link>
                                 is drinking a
-                                <a className="beer"> {drink.drink_name} </a>
+                                <Link to={`/drinks/${drink.id}`} className="beer"> {drink.drink_name} </Link>
                                 by
-                                <a className="brewery"> {brewery.brewery_name}</a>
+                                <Link to={`/breweries/${brewery.id}`} className="brewery"> {brewery.brewery_name}</Link>
                             </p>
                             <div className="comment">
                                 <p className="comment-text">{review}</p>
-                                <div className="caps"></div>
+                                <div className="caps">
+                                    Rating:
+                                    &nbsp;{rating}
+                                </div>
                             </div>
                         </div>
                         <div className="bottom-part">
@@ -44,7 +57,7 @@ class CheckinIndexItem extends React.Component {
                                 </a>
                             </div>
                             <div className="item-footer">
-                                <a href="#" className="post-date item-footer-link">28 Nov 19</a>
+                                <a href="#" className="post-date item-footer-link"> {dayAndTime} </a>
                                 <a href="#" className="post-detail item-footer-link">View Detailed Check-in</a>
                                 <a href="#" className="delete-post item-footer-link">Delete Check-in</a>
                             </div>

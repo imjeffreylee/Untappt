@@ -15,7 +15,7 @@ const mdp = dispatch => {
   return {
     logout: () => dispatch(logout()),
     fetchUser: (id) => dispatch(fetchUser(id)),
-    fetchCheckins: () => dispatch(fetchCheckins())
+    fetchCheckins: () => dispatch(fetchCheckins()),
   };
 };
 
