@@ -10,6 +10,7 @@ class CheckinIndexItem extends React.Component {
         const user = this.props.user;
         const drink = this.props.drink;
         const brewery = this.props.brewery;
+        const review = this.props.review;
         
         return (
             <>
@@ -22,12 +23,12 @@ class CheckinIndexItem extends React.Component {
                             <p>
                                 <Link to={`/users/${user.id}`}>{user.first_name} {user.last_name} </Link>
                                 is drinking a
-                                <a className="beer"> Beer </a>
+                                <a className="beer"> {drink.drink_name} </a>
                                 by
-                                <a className="brewery"> Brewery</a>
+                                <a className="brewery"> {brewery.brewery_name}</a>
                             </p>
                             <div className="comment">
-                                <p className="comment-text">Good!</p>
+                                <p className="comment-text">{review}</p>
                                 <div className="caps"></div>
                             </div>
                         </div>

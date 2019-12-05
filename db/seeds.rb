@@ -186,7 +186,7 @@ checkin5 = Checkin.create(
 )
 
 checkin6 = Checkin.create(
-  user_id: guest.id,
+  user_id: guest2.id,
   drink_id: drink6.id,
   rating: 2,
   review: "I drink it only when there are no other choices."

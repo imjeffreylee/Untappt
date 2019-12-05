@@ -8,21 +8,24 @@ class CheckinIndex extends React.Component {
     
     render() {
         debugger
-        const allCheckins = Object.values(this.props.checkins).map((checkin, i) => {
+        const checkinsArr = Object.values(this.props.checkins);
+        const allCheckins = checkinsArr.map((checkin, i) => {
             const user = this.props.checkinUser
-            if (i > 0) {
-                const drink = checkin.drink
-                const brewery = checkin.brewery
-                
+            // if (i > 0) {
+                const checkinDrink = checkin.checkin.drink
+                const checkinBrewery = checkin.checkin.brewery
+                const checkinReview = checkin.checkin.review
+                debugger
                 return (
                     <CheckinIndexItem
                         key={checkin.checkin.id}
                         user={user}
-                        drink={drink}
-                        brewery={brewery}
+                        drink={checkinDrink}
+                        brewery={checkinBrewery}
+                        review={checkinReview}
                     />
                 )
-            }
+            // }
         })
 
         return (
