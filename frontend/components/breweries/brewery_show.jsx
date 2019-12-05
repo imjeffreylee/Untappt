@@ -18,7 +18,7 @@ class BreweryShow extends React.Component {
     if (!this.props.brewery) {
       return null
     }
-
+// debugger
     return (
       <>
         <section className="profile-body">

@@ -8,15 +8,10 @@ class BreweriesIndex extends React.Component {
     this.state = {
       userId: this.props.match.params.userId
     };
-    this.logOut = this.logOut.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchBreweries();
-  }
-
-  logOut({ logout }) {
-    this.props.logout();
   }
 
   render() {
