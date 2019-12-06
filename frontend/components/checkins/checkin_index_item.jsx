@@ -22,7 +22,7 @@ class CheckinIndexItem extends React.Component {
         } else {
             dayAndTime = day + " " + (hour - 12).toString() + timeWithoutHour + " PM";
         }
-        
+
         const rating = this.props.rating;
         let ratingIcons;
         switch (rating) {
@@ -93,7 +93,7 @@ class CheckinIndexItem extends React.Component {
                 )
                 break;
         }
-        // debugger
+
         return (
             <>
                 <div className="index-item-container">

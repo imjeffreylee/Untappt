@@ -104,3 +104,14 @@ a.btn:active {
     margin-bottom: 12px;
     font-size: 1.2em;
 }
+
+.comment {
+    border: 1px solid #eee;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+.caps {
+    margin-bottom: 16px;
+}
