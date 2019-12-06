@@ -199,4 +199,11 @@ checkin7 = Checkin.create(
   review: "This was just created."
 )
 
+checkin8 = Checkin.create(
+  user_id: guest.id,
+  drink_id: drink6.id,
+  rating: 5,
+  review: "For testing unique checkins."
+)
+
 #### Checkins seeds end

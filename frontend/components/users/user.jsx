@@ -7,7 +7,6 @@ class userProfile extends React.Component {
     this.state = {
       userId: this.props.match.params.userId,
     };
-    this.logOut = this.logOut.bind(this);
   }
 
   componentDidMount() {
@@ -15,10 +14,7 @@ class userProfile extends React.Component {
     this.props.fetchUser(userId);
     this.props.fetchCheckins()
       .then(checkins => this.setState(checkins));
-  }
-
-  logOut({ logout }) {
-    this.props.logout();
+      // debugger
   }
 
   render() {
@@ -29,6 +25,16 @@ class userProfile extends React.Component {
     const allCheckins = Object.values(this.state.checkins);
     const currentUserId = parseInt(this.state.userId);
     const userCheckins = allCheckins.filter(checkin => checkin.checkin.user_id === currentUserId);
+    const totalCheckins = userCheckins.length;
+    let uniqCheckins;
+    let drinkCheckedIn = [];
+    userCheckins.forEach(checkin => {
+      let drinkId = checkin.checkin.drink_id;
+      if (!drinkCheckedIn.includes(drinkId)) {
+        drinkCheckedIn.push(drinkId);
+      }
+    })
+    uniqCheckins = drinkCheckedIn.length;
 // debugger
     return (
       <>
@@ -44,16 +50,16 @@ class userProfile extends React.Component {
                 <p>{this.props.user.username}</p>
                 <ul className="info-list">
                   <li>
-                    <a href="#">TOTAL</a>
+                    <a href="#">{totalCheckins} TOTAL</a>
                   </li>
                   <li>
-                    <a href="#">UNIQUE</a>
+                    <a href="#">{uniqCheckins} UNIQUE</a>
                   </li>
                   <li>
-                    <a href="#">BADGES</a>
+                    <a href="#">0 BADGES</a>
                   </li>
                   <li>
-                    <a href="#">FRIENDS</a>
+                    <a href="#">0 FRIENDS</a>
                   </li>
                 </ul>
               </div>

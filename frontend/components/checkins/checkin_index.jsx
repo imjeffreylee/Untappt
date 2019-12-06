@@ -17,7 +17,7 @@ class CheckinIndex extends React.Component {
             const checkinReview = checkin.checkin.review;
             const checkinRating = checkin.checkin.rating;
             const checkinDayAndTime = checkin.checkin.created_at;
-debugger
+// debugger
             allCheckins.push(
                 <CheckinIndexItem
                     key={checkin.checkin.id}

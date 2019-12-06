@@ -14,8 +14,8 @@
     margin-bottom: 16px;
 }
 
-.top-part > div {
-    margin-bottom: 12px;
+.top-part {
+    margin-bottom: 16px;
 }
 
 .top-part p a {
@@ -89,4 +89,18 @@ a.btn:active {
 
 .bottom-part {
     margin-bottom: 30px;
+}
+
+.fa-beer {
+    font-size: 1.5em;
+    color: rgb(216, 216, 216);
+}
+
+.checked {
+    color: #fec000;
+}
+
+.comment-text {
+    margin-bottom: 12px;
+    font-size: 1.2em;
 }

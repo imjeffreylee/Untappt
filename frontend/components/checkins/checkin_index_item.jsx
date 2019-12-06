@@ -11,17 +11,89 @@ class CheckinIndexItem extends React.Component {
         const drink = this.props.drink;
         const brewery = this.props.brewery;
         const review = this.props.review;
-        const rating = this.props.rating;
+
         let dayAndTime = this.props.dayAndTime;
         const day = dayAndTime.split("T")[0];
         const time = dayAndTime.split("T")[1].slice(0, 8);
+        const timeWithoutHour = time.slice(2);
         const hour = parseInt(time.split(":")[0]);
         if (hour < 12) {
             dayAndTime = day + " " + time + " AM";
         } else {
-            dayAndTime = day + " " + time + " PM";
+            dayAndTime = day + " " + (hour - 12).toString() + timeWithoutHour + " PM";
         }
-// debugger
+        
+        const rating = this.props.rating;
+        let ratingIcons;
+        switch (rating) {
+            case 5:
+                ratingIcons = (
+                    <div className="caps">
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>
+                    </div>
+                )
+                break;
+            case 4:
+                ratingIcons = (
+                    <div className="caps">
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer"></i>
+                    </div>
+                )
+                break;
+            case 3:
+                ratingIcons = (
+                    <div className="caps">
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>
+                    </div>
+                )
+                break;
+            case 2:
+                ratingIcons = (
+                    <div className="caps">
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>
+                    </div>
+                )
+                break;
+            case 1:
+                ratingIcons = (
+                    <div className="caps">
+                        <i className="fas fa-beer checked"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>
+                    </div>
+                )
+                break;
+            default:
+                ratingIcons = (
+                    <div className="caps">
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>&nbsp;
+                        <i className="fas fa-beer"></i>
+                    </div>
+                )
+                break;
+        }
+        // debugger
         return (
             <>
                 <div className="index-item-container">
@@ -39,10 +111,7 @@ class CheckinIndexItem extends React.Component {
                             </p>
                             <div className="comment">
                                 <p className="comment-text">{review}</p>
-                                <div className="caps">
-                                    Rating:
-                                    &nbsp;{rating}
-                                </div>
+                                {ratingIcons}
                             </div>
                         </div>
                         <div className="bottom-part">
