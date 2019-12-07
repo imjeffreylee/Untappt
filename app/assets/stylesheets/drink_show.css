@@ -47,3 +47,7 @@ p.drink-type {
   background: #F4B800;
   transition: .3s;
 }
+
+.total-beer span {
+  font-weight: bold;
+}

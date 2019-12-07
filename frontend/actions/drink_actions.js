@@ -7,7 +7,8 @@ export const receiveDrink = payload => {
   return {
     type: RECEIVE_DRINK,
     drink: payload.drink,
-    breweries: payload.breweries
+    breweries: payload.breweries,
+    checkins: payload.checkins
   };
 };
 

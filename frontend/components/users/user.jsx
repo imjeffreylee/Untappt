@@ -14,7 +14,6 @@ class userProfile extends React.Component {
     this.props.fetchUser(userId);
     this.props.fetchCheckins()
       .then(checkins => this.setState(checkins));
-      // debugger
   }
 
   render() {
@@ -35,7 +34,7 @@ class userProfile extends React.Component {
       }
     })
     uniqCheckins = drinkCheckedIn.length;
-// debugger
+
     return (
       <>
         <div className="user-page-container">
@@ -87,7 +86,6 @@ class userProfile extends React.Component {
                   <div className="profile-checkin-feeds">
                     <h2>Your Recent Activity</h2>
                     <CheckinIndex
-                      checkinUser={this.props.user}
                       checkins={userCheckins}
                       />
                   </div>

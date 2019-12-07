@@ -16,9 +16,7 @@ const CheckinsReducer = (state = {}, action) => {
             });
     
         case RECEIVE_CHECKINS:
-            debugger
-            // return action.checkins;
-            return merge({}, state, action.checkins);
+            return action.checkins;
 
         case REMOVE_CHECKIN:
             const newSatet = merge({}, state);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CheckinIndex from "../checkins/checkin_index";
 
 class DrinkShow extends React.Component {
   constructor(props) {
@@ -12,11 +13,33 @@ class DrinkShow extends React.Component {
   componentDidMount() {
     let drinkId = this.props.match.params.drinkId;
     this.props.fetchDrink(drinkId);
+    this.props.fetchCheckins();
   }
 
   render() {
-    if (!this.props.drink) {
+    if (!this.props.drink || this.props.checkins.length === 0) {
       return null
+    }
+
+    let drinkId = parseInt(this.props.match.params.drinkId);
+    const allCheckins = this.props.checkins;
+    const drinkCheckins = [];
+    allCheckins.forEach(checkin => {
+      if (checkin.checkin.drink_id === drinkId) {
+        drinkCheckins.push(checkin);
+      }
+    })
+
+    let sum = 0;
+    drinkCheckins.forEach(checkin => {
+      sum += checkin.checkin.rating;
+    })
+    const totalRatings = drinkCheckins.length;
+    const avgRating = (sum / totalRatings).toFixed(2);
+
+    let bitterness = this.props.drink.IBU;
+    if (this.props.drink.IBU === 0) {
+      bitterness = "N/A";
     }
 
     return (
@@ -41,13 +64,13 @@ class DrinkShow extends React.Component {
                     <p>{this.props.drink.ABV}% ABV</p>
                   </div>
                   <div className="brew-rating-total">
-                    <p>{this.props.drink.IBU} IBU</p>
+                    <p>{bitterness} IBU</p>
                   </div>
                   <div className="total-beer">
-                    <p>Rating 3.6</p>
+                    <p>Rating <span>{avgRating}</span> / 5</p>
                   </div>
                   <div className="claimed">
-                    <p>360,717 Ratings</p>
+                    <p>{totalRatings} Ratings</p>
                   </div>
                 </div>
                 <div className="desc-links-container">
@@ -81,6 +104,9 @@ class DrinkShow extends React.Component {
               </div>
               <div className="brew-activity-box">
                 <h2>Global Recent Activity</h2>
+                <CheckinIndex
+                  checkins={drinkCheckins}
+                />
               </div>
             </div>
             <aside className="brewery-list-sidebar">
