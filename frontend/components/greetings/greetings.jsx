@@ -17,18 +17,23 @@ const Greeting = () => {
           <p>Discover and share your favorite beer.</p>
           <div className="icon-block">
             <span>
-              <a href="https://github.com/imjeffreylee/Untappt" target="_blank">
-                <i className="fab fa-github"></i>
+              <a title="GitHub" href="https://github.com/imjeffreylee/Untappt" target="_blank">
+                <i className="home-icon fab fa-github"></i>
               </a>
             </span>
             <span>
-              <a href="https://www.linkedin.com/in/jeffrey-shian-chang-lee/" target="_blank">
-                <i className="fab fa-linkedin-in"></i>
+              <a title="LinkedIn" href="https://www.linkedin.com/in/jeffrey-shian-chang-lee/" target="_blank">
+                <i className="home-icon fab fa-linkedin-in"></i>
               </a>
             </span>
             <span>
-              <a href="https://angel.co/jeffrey-lee-12" target="_blank">
-                <i className="fab fa-angellist"></i>
+              <a title="AngelList" href="https://angel.co/jeffrey-lee-12" target="_blank">
+                <i className="home-icon fab fa-angellist"></i>
+              </a>
+            </span>
+            <span>
+              <a title="portfolio" href="https://imjeffreylee.github.io/" target="_blank">
+                <i className="home-icon fas fa-portrait"></i>
               </a>
             </span>
           </div>

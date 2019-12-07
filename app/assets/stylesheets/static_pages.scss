@@ -91,20 +91,16 @@ h6 {
   font-size: 12px;
 }
 
-i.fab {
+i.fab, i.fas {
   color: rgb(255, 255, 255);
   font-size: 30px;
 }
 
-i.fa-github {
+i.fa-github, i.fa-linkedin-in, i.fa-angellist {
   margin-right: 20px;
 }
 
-i.fa-linkedin-in {
-  margin-right: 20px;
-}
-
-i.fa-github:hover, i.fa-linkedin-in:hover, i.fa-angellist:hover {
+.home-icon:hover {
   color: gray;
   transition: .3s;
 }
