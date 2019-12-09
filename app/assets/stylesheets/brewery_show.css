@@ -14,6 +14,10 @@
   font-size: 1.25em;
 }
 
+.brew-show-info a:hover {
+  opacity: .5;
+}
+
 p.brew-type {
   font-size: 1.25em;
   margin-bottom: 6px;
