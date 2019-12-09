@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CheckinIndex from "../checkins/checkin_index";
 
 class BreweryShow extends React.Component {
   constructor(props) {
@@ -12,13 +13,25 @@ class BreweryShow extends React.Component {
   componentDidMount() {
     let breweryId = this.props.match.params.breweryId;
     this.props.fetchBrewery(breweryId);
+    this.props.fetchCheckins();
+    this.props.fetchDrinks();
   }
 
   render() {
-    if (!this.props.brewery) {
+    if (!this.props.brewery || this.props.checkins.length === 0 || this.props.drinks.length === 0) {
       return null
     }
-// debugger
+
+    const breweryId = parseInt(this.state.breweryId);
+    const numOfDrinks = this.props.drinks.filter(drink => drink.brewery_id === breweryId);
+    const brewCheckins = this.props.checkins.filter(checkin => checkin.checkin.brewery.id === breweryId);
+    
+    let sum = 0;
+    brewCheckins.forEach(checkin => sum += checkin.checkin.rating);
+    const avgRating = (sum / brewCheckins.length).toFixed(2);
+
+    window.scrollTo(0, 0);
+
     return (
       <>
         <section className="profile-body">
@@ -36,13 +49,13 @@ class BreweryShow extends React.Component {
                 </div>
                 <div className="rating-and-beer">
                   <div className="brew-rating-avg">
-                    <p>Rating 3.45</p>
+                    <p>Rating <span>{avgRating}</span> / 5</p>
                   </div>
                   <div className="brew-rating-total">
-                    <p>5,047,532 Ratings</p>
+                    <p>{brewCheckins.length} Ratings</p>
                   </div>
                   <div className="total-beer">
-                    <Link to="/drinks">764 Beers</Link>
+                    <Link to="/drinks">{numOfDrinks.length} Beers</Link>
                   </div>
                   <div className="claimed">
                     <img src={window.brew_claimed} alt="claimed"/>
@@ -73,6 +86,9 @@ class BreweryShow extends React.Component {
               </div>
               <div className="brew-activity-box">
                 <h2>Global Recent Activity</h2>
+                <CheckinIndex
+                  checkins={brewCheckins}
+                />
               </div>
             </div>
             <aside className="brewery-list-sidebar">

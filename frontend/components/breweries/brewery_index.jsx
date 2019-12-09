@@ -24,6 +24,8 @@ class BreweriesIndex extends React.Component {
       )
     })
 
+    window.scrollTo(0, 0);
+
     return (
       <>
         <section className="profile-body">

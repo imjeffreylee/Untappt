@@ -20,6 +20,8 @@ class DrinksIndex extends React.Component {
       )
     })
 
+    window.scrollTo(0, 0);
+
     return (
       <section className="profile-body">
         <div className="create-space"></div>

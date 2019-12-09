@@ -168,3 +168,7 @@ p.brew-ori {
   padding-bottom: 8px;
   border-bottom: 1px solid #e5e5e5;
 }
+
+.brew-rating-avg span {
+  font-weight: bold;
+}
