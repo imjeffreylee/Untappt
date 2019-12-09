@@ -9,7 +9,7 @@ const msp = (state, ownProps) => {
   let brewery = state.entities.breweries[breweryId];
   let drinks = Object.values(state.entities.drinks);
   let checkins = Object.values(state.entities.checkins);
-  // debugger
+  
   return {
     brewery,
     drinks,

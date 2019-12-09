@@ -1,6 +1,6 @@
 # Untappt
 
-Untappt is a beer review website. It allows users to create, edit, review beer and breweries and share with friends. Users can also get beer and breweries information by searching in the website.
+Untappt is a beer review app inspired by Untappd (untappd.com). It allows users to create, edit, review beer and breweries and share with friends. Users can also get beer and breweries information by searching in the website.
 
 ## Features
 

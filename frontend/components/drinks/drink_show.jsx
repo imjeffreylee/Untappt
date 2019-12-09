@@ -23,12 +23,7 @@ class DrinkShow extends React.Component {
 
     let drinkId = parseInt(this.props.match.params.drinkId);
     const allCheckins = this.props.checkins;
-    const drinkCheckins = [];
-    allCheckins.forEach(checkin => {
-      if (checkin.checkin.drink_id === drinkId) {
-        drinkCheckins.push(checkin);
-      }
-    })
+    const drinkCheckins = allCheckins.filter(checkin => checkin.checkin.drink_id === drinkId);
 
     let sum = 0;
     drinkCheckins.forEach(checkin => {
