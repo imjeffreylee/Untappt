@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import modalReducer from './modal_reducer';
+import modalReducer from './modals_reducer';
 
 export default combineReducers({
     modal: modalReducer,

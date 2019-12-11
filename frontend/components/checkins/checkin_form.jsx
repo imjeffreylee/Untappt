@@ -6,7 +6,7 @@ class CheckinForm extends React.Component {
         this.state = {
             drink_id: this.props.drink.id,
             review: "",
-            rating: 5,
+            rating: 0,
             slideVal: 8
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,8 +27,14 @@ class CheckinForm extends React.Component {
 
     render() {
         return (
-            <div className="checkin-container">
-                <h1>Hello World</h1>
+            <div className="checkin-form">
+                <div className="checkin-form-top">
+                    <h3 className="checkin-form-title">Check-In</h3>
+                    <a onClick={this.props.closeModal}>
+                        <i className="fas fa-times modal-close-icon"></i>
+                    </a>
+                </div>
+                
             </div>
         )
     }

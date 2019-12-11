@@ -10,16 +10,18 @@ const Modal = (props) => {
 
     return (
         <div className="modal-background" onClick={props.closeModal}>
-            <div className="modal-child" onClick={e => e.stopPropagation()}>
+            <div className="modal-body" onClick={e => e.stopPropagation()}>
                 <CheckinFormContainer drink={props.drink} />
             </div>
         </div>
     )
 }
 
-const msp = state => ({
-    modal: state.ui.modal
-});
+const msp = state => {
+    return {
+        modal: state.ui.modal
+    }
+};
 
 const mdp = dispatch => ({
     closeModal: () => dispatch(closeModal())

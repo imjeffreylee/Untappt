@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CheckinIndex from "../checkins/checkin_index";
+import ModalContainer from "../modals/modal";
 
 class DrinkShow extends React.Component {
   constructor(props) {
@@ -41,6 +42,9 @@ class DrinkShow extends React.Component {
 
     return (
       <>
+        <ModalContainer
+          drink={this.props.drink}
+        />
         <section className="profile-body">
           <div className="create-space"></div>
           <div className="brewery-list-container">
