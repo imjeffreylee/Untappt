@@ -12,7 +12,22 @@
     font-weight: 600;
 }
 
+.checkin-form-body {
+    padding: 16px;
+}
+
 .modal-close-icon {
     color: #fff;
     font-weight: 400;
+}
+
+.review-text {
+    resize: none;
+    width: 80%;
+    height: 80px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    margin-right: 1.5%;
+    font-size: 1em;
+    box-sizing: border-box;
 }

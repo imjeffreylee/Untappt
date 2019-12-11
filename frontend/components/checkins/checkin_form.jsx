@@ -34,7 +34,11 @@ class CheckinForm extends React.Component {
                         <i className="fas fa-times modal-close-icon"></i>
                     </a>
                 </div>
-                
+                <div className="checkin-form-body">
+                    <form onSubmit={this.handleSubmit} method="post">
+                        <textarea className="review-text" placeholder="What did you think?" onChange={this.handleChange("review")}></textarea>
+                    </form>
+                </div>
             </div>
         )
     }
