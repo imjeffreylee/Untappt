@@ -12,6 +12,12 @@ class CheckinForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        document.addEventListener("keydown", (e) => {
+            if (e.keyCode === 27) this.props.closeModal();
+        })
+    }
+
     handleChange(field) {
         return (e) => {
             this.setState({ [field]: e.target.value }, () => {
@@ -36,7 +42,10 @@ class CheckinForm extends React.Component {
                 </div>
                 <div className="checkin-form-body">
                     <form onSubmit={this.handleSubmit} method="post">
-                        <textarea className="review-text" placeholder="What did you think?" onChange={this.handleChange("review")}></textarea>
+                        <div className="photo-and-text">
+                            <textarea className="review-text" placeholder="What did you think?" onChange={this.handleChange("review")}></textarea>
+                            <input type="button" className="checkin-photo-button"/>
+                        </div>
                     </form>
                 </div>
             </div>

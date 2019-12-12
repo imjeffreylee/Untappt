@@ -27,7 +27,31 @@
     height: 80px;
     border: 1px solid #d6d6d6;
     border-radius: 4px;
-    margin-right: 1.5%;
     font-size: 1em;
     box-sizing: border-box;
+}
+
+.checkin-photo-button {
+    width: 16.8%;
+    height: 76px;
+    background-image: url("ico_checkin_photo.png");
+    background-size: 80px 80px;
+    background-position: center center;
+    background-color: #ffcc00;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #7d7070;
+}
+
+.checkin-photo-button:hover {
+    background-color: rgb(245, 184, 38);
+}
+
+.checkin-photo-button:active {
+    box-shadow: 1px 1px 2px #7d7070 inset;
+}
+
+.photo-and-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
