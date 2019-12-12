@@ -46,6 +46,18 @@ class CheckinForm extends React.Component {
                             <textarea className="review-text" placeholder="What did you think?" onChange={this.handleChange("review")}></textarea>
                             <input type="button" className="checkin-photo-button"/>
                         </div>
+                        <div className="slideset-and-confirm">
+                            <div className="slide-output">
+                                <input type="range" name="rating" min="1" max="5" className="checkin-form-slide"/>
+                                <div className="output-container">
+                                    <p>5</p>
+                                    <p className="text-star">STARS</p>
+                                </div>
+                            </div>
+                            <div className="confirm-container">
+                                <input className="confirm-btn" type="submit" value="Confirm"/>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
