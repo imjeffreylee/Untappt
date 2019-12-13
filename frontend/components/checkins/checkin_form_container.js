@@ -10,7 +10,7 @@ const msp = state => ({
 const mdp = dispatch => ({
     closeModal: () => dispatch(closeModal()),
     // createCheckin: (id, form) => dispatch(createCheckin(id, form))
-    createCheckin: (id, form) => dispatch(createCheckin(id, form))
+    createCheckin: (checkin) => dispatch(createCheckin(checkin))
 })
 
 export default connect(msp, mdp)(CheckinForm);

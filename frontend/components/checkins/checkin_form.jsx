@@ -30,7 +30,8 @@ class CheckinForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         // debugger
-        this.props.createCheckin(this.state.drink_id, this.state).then(() => this.props.closeModal());
+        // this.props.createCheckin(this.state.drink_id, this.state).then(() => this.props.closeModal());
+        this.props.createCheckin(this.state).then(() => this.props.closeModal());
     }
 
     render() {
