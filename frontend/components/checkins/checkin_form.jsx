@@ -6,8 +6,9 @@ class CheckinForm extends React.Component {
         this.state = {
             drink_id: this.props.drink.id,
             review: "",
-            rating: 0,
-            slideVal: 8
+            rating: 5,
+            slideVal: 5,
+            maxChars: 140
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -21,17 +22,19 @@ class CheckinForm extends React.Component {
     handleChange(field) {
         return (e) => {
             this.setState({ [field]: e.target.value }, () => {
-                this.setState({ 'rating': (this.state.slideVal * 0.25) })
+                this.setState({ 'rating': this.state.slideVal })
             });
         };
     }
 
     handleSubmit(e) {
         e.preventDefault();
+        // debugger
         this.props.createCheckin(this.state.drink_id, this.state).then(() => this.props.closeModal());
     }
 
     render() {
+        // debugger
         return (
             <div className="checkin-form">
                 <div className="checkin-form-top">
@@ -44,13 +47,14 @@ class CheckinForm extends React.Component {
                     <form onSubmit={this.handleSubmit} method="post">
                         <div className="photo-and-text">
                             <textarea className="review-text" placeholder="What did you think?" onChange={this.handleChange("review")}></textarea>
+                            <span className="max-chars">{this.state.maxChars - this.state.review.length}</span>
                             <input type="button" className="checkin-photo-button"/>
                         </div>
                         <div className="slideset-and-confirm">
                             <div className="slide-output">
-                                <input type="range" name="rating" min="1" max="5" className="checkin-form-slide"/>
+                                <input type="range" name="rating" min="1" max="5" value={this.state.slideVal} onChange={this.handleChange("slideVal")} className="checkin-form-slide"/>
                                 <div className="output-container">
-                                    <p>5</p>
+                                    <p> {this.state.rating} </p>
                                     <p className="text-star">STARS</p>
                                 </div>
                             </div>

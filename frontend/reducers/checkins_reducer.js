@@ -3,7 +3,6 @@ import {
     RECEIVE_CHECKINS,
     REMOVE_CHECKIN
 } from "../actions/checkin_actions";
-
 import { merge } from "lodash/merge";
 
 const CheckinsReducer = (state = {}, action) => {
