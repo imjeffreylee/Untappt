@@ -13,7 +13,6 @@ export const receiveCheckins = checkins => {
 }
 
 export const receiveCheckin = payload => {
-  debugger
   return {
     type: RECEIVE_CHECKIN,
     checkin: payload.checkin,
@@ -42,19 +41,13 @@ export const fetchCheckin = (id) => dispatch => {
   );
 }
 
-// export const createCheckin = (id, form) => {
-//   return CheckinUtil.createCheckin(id, form).then(payload =>
-//     dispatch(receiveCheckin(payload))
-//   )
-// }
-
-export const createCheckin = (checkin) => {
-  return CheckinUtil.createCheckin(checkin).then(payload =>
-    dispatch(receiveCheckin(payload))
+export const createCheckin = (checkin) => dispatch => {
+  return CheckinUtil.createCheckin(checkin).then(
+    checkins => dispatch(receiveCheckins(checkins))
   )
 }
 
-export const deleteCheckin = (id) => {
+export const deleteCheckin = (id) => dispatch => {
   return CheckinUtil.deleteCheckin(id).then(checkin =>
     dispatch(removeCheckin(checkin))
   )

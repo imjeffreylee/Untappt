@@ -11,7 +11,10 @@ const Modal = (props) => {
     return (
         <div className="modal-background" onClick={props.closeModal}>
             <div className="modal-body" onClick={e => e.stopPropagation()}>
-                <CheckinFormContainer drink={props.drink} />
+                <CheckinFormContainer
+                    drink={props.drink}
+                    user={props.user}
+                    />
             </div>
         </div>
     )

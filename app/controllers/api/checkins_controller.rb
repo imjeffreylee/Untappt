@@ -2,6 +2,7 @@ class Api::CheckinsController < ApplicationController
   def create
     @checkin = Checkin.new(checkin_params)
     if @checkin.save
+      @checkins = Checkin.all
       render :index
     else
       render json: @checkin.errors.full_messages, status: 422

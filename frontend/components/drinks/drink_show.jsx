@@ -14,11 +14,15 @@ class DrinkShow extends React.Component {
   componentDidMount() {
     let drinkId = this.props.match.params.drinkId;
     this.props.fetchDrink(drinkId);
+    debugger
     this.props.fetchCheckins();
+    debugger
+    let currentUserId = this.props.userId;
+    this.props.fetchUser(currentUserId);
   }
 
   render() {
-    if (!this.props.drink || this.props.checkins.length === 0) {
+    if (!this.props.drink || this.props.checkins.length === 0 || !this.props.user) {
       return null
     }
 
@@ -39,11 +43,12 @@ class DrinkShow extends React.Component {
     }
 
     window.scrollTo(0, 0);
-
+debugger
     return (
       <>
         <ModalContainer
           drink={this.props.drink}
+          user={this.props.user}
         />
         <section className="profile-body">
           <div className="create-space"></div>
