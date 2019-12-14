@@ -6,7 +6,6 @@ import { fetchUser } from "../../actions/session_actions"
 import DrinkShow from "./drink_show";
 
 const msp = (state, ownProps) => {
-  debugger
   let drinkId = ownProps.match.params.drinkId;
   let drink = state.entities.drinks[drinkId];
   let userId = state.session.id;

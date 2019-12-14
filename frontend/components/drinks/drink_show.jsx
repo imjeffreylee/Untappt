@@ -14,9 +14,7 @@ class DrinkShow extends React.Component {
   componentDidMount() {
     let drinkId = this.props.match.params.drinkId;
     this.props.fetchDrink(drinkId);
-    debugger
     this.props.fetchCheckins();
-    debugger
     let currentUserId = this.props.userId;
     this.props.fetchUser(currentUserId);
   }
@@ -43,7 +41,7 @@ class DrinkShow extends React.Component {
     }
 
     window.scrollTo(0, 0);
-debugger
+
     return (
       <>
         <ModalContainer
