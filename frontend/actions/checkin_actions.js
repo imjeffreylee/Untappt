@@ -21,10 +21,11 @@ export const receiveCheckin = payload => {
   }
 }
 
-export const removeCheckin = checkin => {
+export const removeCheckin = checkinId => {
+  // debugger
   return {
     type: REMOVE_CHECKIN,
-    checkinId: checkin.id
+    checkinId
   };
 }
 
@@ -48,7 +49,8 @@ export const createCheckin = (checkin) => dispatch => {
 }
 
 export const deleteCheckin = (id) => dispatch => {
+  // debugger
   return CheckinUtil.deleteCheckin(id).then(checkin =>
-    dispatch(removeCheckin(checkin))
+    dispatch(removeCheckin(id))
   )
 }

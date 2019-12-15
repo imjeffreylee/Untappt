@@ -1,5 +1,8 @@
 import React from "react";
 import CheckinIndexItem from "./checkin_index_item";
+import { connect } from "react-redux";
+import { deleteCheckin } from "../../actions/checkin_actions"
+
 
 class CheckinIndex extends React.Component {
     constructor(props) {
@@ -21,12 +24,15 @@ class CheckinIndex extends React.Component {
             allCheckins.push(
                 <CheckinIndexItem
                     key={checkin.checkin.id}
+                    id={checkin.checkin.id}
                     user={user}
                     drink={checkinDrink}
                     brewery={checkinBrewery}
                     review={checkinReview}
                     rating={checkinRating}
                     dayAndTime={checkinDayAndTime}
+                    currentUserId={this.props.currentUserId}
+                    deleteCheckin={this.props.deleteCheckin}
                 />
             )
             
@@ -40,4 +46,12 @@ class CheckinIndex extends React.Component {
     }
 }
 
-export default CheckinIndex;
+const msp = state => ({
+    currentUserId: state.session.id
+})
+
+const mdp = dispatch => ({
+    deleteCheckin: id => dispatch(deleteCheckin(id))
+})
+
+export default connect(msp, mdp)(CheckinIndex);

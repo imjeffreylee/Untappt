@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
 import { fetchDrink } from "../../actions/drink_actions";
-import { fetchCheckins } from "../../actions/checkin_actions"
+import { fetchCheckins } from "../../actions/checkin_actions";
 import { launchModal } from "../../actions/modal_actions";
-import { fetchUser } from "../../actions/session_actions"
+import { fetchUser } from "../../actions/session_actions";
 import DrinkShow from "./drink_show";
 
 const msp = (state, ownProps) => {

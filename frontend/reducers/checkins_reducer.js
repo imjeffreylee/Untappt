@@ -16,10 +16,13 @@ const CheckinsReducer = (state = {}, action) => {
         case RECEIVE_CHECKINS:
             return action.checkins;
 
-        case REMOVE_CHECKIN:
-            const newSatet = merge({}, state);
-            delete newSatet[action.checkinId];
-            return newState;
+        // case REMOVE_CHECKIN:
+        //     debugger
+        //     console.log(state);
+        //     let newState = merge({}, state, {});
+        //     debugger
+        //     delete newState[action.checkinId];
+        //     return newState;
 
         default:
             return state;
