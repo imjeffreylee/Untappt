@@ -6,10 +6,6 @@ class CheckinIndexItem extends React.Component {
         super(props);
     }
 
-    removeCheckin(id) {
-        this.props.deleteCheckin(id).then(location.reload());
-    }
-
     render() {
         const user = this.props.user;
         const drink = this.props.drink;
@@ -100,11 +96,10 @@ class CheckinIndexItem extends React.Component {
 
         let deleteCheckin;
         if (this.props.currentUserId === user.id) {
-            // debugger
             deleteCheckin = (
                 <a
                     className="delete-post item-footer-link"
-                    onClick={() => this.removeCheckin(this.props.id)}
+                    onClick={() => this.props.deleteCheckin(this.props.id)}
                 >
                     Delete Check-in
                 </a>
@@ -114,7 +109,7 @@ class CheckinIndexItem extends React.Component {
                 <div></div>
             )
         }
-// debugger
+
         return (
             <>
                 <div className="index-item-container">
