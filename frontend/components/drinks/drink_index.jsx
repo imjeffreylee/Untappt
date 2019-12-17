@@ -10,6 +10,7 @@ class DrinksIndex extends React.Component {
     if (!this.props.drinks) {
       return null;
     }
+    
     const drinks = this.props.drinks.map(drink => {
       return (
         <DrinkIndexItem

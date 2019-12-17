@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CheckinIndex from "../checkins/checkin_index";
+import DrinksIndexItem from "../drinks/drink_index_item";
 
 class BreweryShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      breweryId: this.props.match.params.breweryId
+      breweryId: this.props.match.params.breweryId,
+      showDrinks: false
     }
   }
 
@@ -23,13 +25,48 @@ class BreweryShow extends React.Component {
     }
 
     const breweryId = parseInt(this.state.breweryId);
-    const numOfDrinks = this.props.drinks.filter(drink => drink.brewery_id === breweryId);
+    const brewDrinks = this.props.drinks.filter(drink => drink.brewery_id === breweryId);
     const brewCheckins = this.props.checkins.filter(checkin => checkin.checkin.brewery.id === breweryId);
     
     let sum = 0;
     brewCheckins.forEach(checkin => sum += checkin.checkin.rating);
     let avgRating = (sum / brewCheckins.length).toFixed(2);
     if (brewCheckins.length === 0) avgRating = "N/A";
+
+    let checkinsOrDrinks;
+    if (this.state.showDrinks) {
+      checkinsOrDrinks = brewDrinks.map(brewDrink => {
+        return (
+          <div key={brewDrink.id}>
+            <h2>Beer List</h2>
+            <DrinksIndexItem
+              drink={brewDrink}
+              brewery={this.props.brewery}
+            />
+          </div>
+        )
+      })
+    } else {
+      checkinsOrDrinks = (
+        <div>
+          <h2>Global Recent Activity</h2>
+          <CheckinIndex
+            checkins={brewCheckins}
+          />
+        </div>
+      )
+    }
+
+    let linkDrinksOrCheckins;
+    if (this.state.showDrinks) {
+      linkDrinksOrCheckins = (
+        <a onClick={() => this.setState({ showDrinks: false })}>All Checkins</a>
+      )
+    } else {
+      linkDrinksOrCheckins = (
+        <a onClick={() => this.setState({ showDrinks: true })}>{brewDrinks.length} Beers</a>
+      )
+    }
 
     window.scrollTo(0, 0);
 
@@ -56,7 +93,7 @@ class BreweryShow extends React.Component {
                     <p>{brewCheckins.length} Ratings</p>
                   </div>
                   <div className="total-beer">
-                    <Link to="/drinks">{numOfDrinks.length} Beers</Link>
+                    {linkDrinksOrCheckins}
                   </div>
                   <div className="claimed">
                     <img src={window.brew_claimed}
@@ -89,10 +126,7 @@ class BreweryShow extends React.Component {
                 </div>
               </div>
               <div className="brew-activity-box">
-                <h2>Global Recent Activity</h2>
-                <CheckinIndex
-                  checkins={brewCheckins}
-                />
+                {checkinsOrDrinks}
               </div>
             </div>
             <aside className="brewery-list-sidebar">
