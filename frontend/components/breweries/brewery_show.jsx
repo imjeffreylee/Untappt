@@ -28,7 +28,8 @@ class BreweryShow extends React.Component {
     
     let sum = 0;
     brewCheckins.forEach(checkin => sum += checkin.checkin.rating);
-    const avgRating = (sum / brewCheckins.length).toFixed(2);
+    let avgRating = (sum / brewCheckins.length).toFixed(2);
+    if (brewCheckins.length === 0) avgRating = "N/A";
 
     window.scrollTo(0, 0);
 

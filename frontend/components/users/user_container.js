@@ -6,8 +6,11 @@ import userProfile from "./user";
 const msp = (state, ownProps) => {
   let userId = ownProps.match.params.userId;
   let user = state.entities.users[userId];
+  let checkins = Object.values(state.entities.checkins);
+  
   return {
-    user
+    user,
+    checkins
   };
 };
 

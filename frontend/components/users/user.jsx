@@ -12,16 +12,15 @@ class userProfile extends React.Component {
   componentDidMount() {
     let userId = this.props.match.params.userId;
     this.props.fetchUser(userId);
-    this.props.fetchCheckins()
-      .then(checkins => this.setState(checkins));
+    this.props.fetchCheckins();
   }
 
   render() {
-    if (!this.props.user || !this.state.checkins) {
+    if (!this.props.user || this.props.checkins.length === 0) {
       return null;
     }
 
-    const allCheckins = Object.values(this.state.checkins);
+    const allCheckins = this.props.checkins;
     const currentUserId = parseInt(this.state.userId);
     const userCheckins = allCheckins.filter(checkin => checkin.checkin.user_id === currentUserId);
     const totalCheckins = userCheckins.length;

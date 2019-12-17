@@ -33,7 +33,8 @@ class DrinkShow extends React.Component {
       sum += checkin.checkin.rating;
     })
     const totalRatings = drinkCheckins.length;
-    const avgRating = (sum / totalRatings).toFixed(2);
+    let avgRating = (sum / totalRatings).toFixed(2);
+    if (totalRatings === 0) avgRating = "N/A";
 
     let bitterness = this.props.drink.IBU;
     if (this.props.drink.IBU === 0) {
