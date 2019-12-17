@@ -59,7 +59,10 @@ class BreweryShow extends React.Component {
                     <Link to="/drinks">{numOfDrinks.length} Beers</Link>
                   </div>
                   <div className="claimed">
-                    <img src={window.brew_claimed} alt="claimed"/>
+                    <img src={window.brew_claimed}
+                      alt="claimed"
+                      title="This brewery has been claimed and is officially managed."
+                      />
                   </div>
                 </div>
                 <div className="desc-links-container">
