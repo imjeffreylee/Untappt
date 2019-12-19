@@ -162,7 +162,7 @@ p.brew-ori {
 }
 
 .brew-activity-box h2 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4em;
   margin-bottom: 24px;
   padding-bottom: 8px;
@@ -172,4 +172,20 @@ p.brew-ori {
 .brew-rating-avg span {
   font-weight: bold;
   color: #c60;
+}
+
+.add-beer {
+  background: #ffa;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+.add-beer a {
+  color: #c60;
+}
+
+.add-beer a:hover {
+  opacity: .5;
 }

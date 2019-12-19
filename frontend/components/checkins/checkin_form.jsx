@@ -15,7 +15,7 @@ class CheckinForm extends React.Component {
     }
 
     componentDidMount() {
-        document.addEventListener("keydown", (e) => {
+        document.addEventListener("keydown", e => {
             if (e.keyCode === 27) this.props.closeModal();
         })
     }

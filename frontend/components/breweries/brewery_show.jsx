@@ -34,6 +34,8 @@ class BreweryShow extends React.Component {
     if (brewCheckins.length === 0) avgRating = "N/A";
 
     let checkinsOrDrinks;
+    let linkDrinksOrCheckins;
+    let linkToCreateDrink;
     if (this.state.showDrinks) {
       checkinsOrDrinks = brewDrinks.map(brewDrink => {
         return (
@@ -45,7 +47,18 @@ class BreweryShow extends React.Component {
             />
           </div>
         )
-      })
+      });
+
+      linkDrinksOrCheckins = (
+        <a onClick={() => this.setState({ showDrinks: false })}>All Checkins</a>
+      );
+
+      linkToCreateDrink = (
+        <div className="add-beer">
+          <p>Don't see the beer you're looking for?</p>
+          <Link to={`/breweries/${this.props.brewery.id}/new_drink`}>You can add it here</Link>
+        </div>
+      )
     } else {
       checkinsOrDrinks = (
         <div>
@@ -54,22 +67,15 @@ class BreweryShow extends React.Component {
             checkins={brewCheckins}
           />
         </div>
-      )
-    }
+      );
 
-    let linkDrinksOrCheckins;
-    if (this.state.showDrinks) {
-      linkDrinksOrCheckins = (
-        <a onClick={() => this.setState({ showDrinks: false })}>All Checkins</a>
-      )
-    } else {
       linkDrinksOrCheckins = (
         <a onClick={() => this.setState({ showDrinks: true })}>{brewDrinks.length} Beers</a>
-      )
+      );
     }
 
     window.scrollTo(0, 0);
-
+// debugger
     return (
       <>
         <section className="profile-body">
@@ -139,8 +145,9 @@ class BreweryShow extends React.Component {
                   <p className="people-like-brew-num">187,576</p>
                   <p>PEOPLE LIKE THIS BREWERY</p>
                 </div>
-                <a className="like-this-brew">Like This Brewery</a>
+                <span className="like-this-brew">Like This Brewery</span>
               </div>
+              {linkToCreateDrink}
             </aside>
           </div>
         </section>

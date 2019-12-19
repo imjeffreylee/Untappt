@@ -1,0 +1,114 @@
+.beer-form-master {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-beer-form {
+    background: #fff;
+    max-width: 500px;
+    width: 100%;
+    padding: 32px;
+    margin: 28px auto 64px;
+    box-sizing: border-box;
+}
+
+.form-container h1 {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+}
+
+.form-container h2 {
+    line-height: 1.3em;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: .95em;
+}
+
+.form-container p {
+    text-decoration: underline;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.form-container ul {
+    margin-bottom: 32px;
+}
+
+.form-container ul li {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-bottom: 12px;
+    font-size: .9em;
+    margin-left: 16px;
+}
+
+.abv-ibu-style {
+    display: flex;
+    margin: 12px 0;
+}
+
+.add-beer-form label {
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.add-beer-form > label > input {
+    display: block;
+    width: 100%;
+}
+
+.abv-ibu-style label input,
+.add-beer-form > label > input,
+select[name="style"],
+textarea[name="description"] {
+    margin: 4px 0 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    height: 32px;
+}
+
+select[name="style"] {
+    width: 100%;
+}
+
+textarea[name="description"] {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.add-beer-form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #ffcc00;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.add-beer-form input[type="submit"]:hover {
+    color: #ffcc00;
+    background: #fff;
+    box-shadow: 1px 1px 2px rgb(149, 149, 149);
+    transition: .3s;
+}
+
+.add-beer-form input[type="submit"]:active {
+    color: #ffcc00;
+    background: #fff;
+    box-shadow: 1px 1px 2px rgb(149, 149, 149) inset;
+}
