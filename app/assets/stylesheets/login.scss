@@ -82,12 +82,12 @@
   color: white;
   background-color: #ffcc00;
   box-sizing: border-box;
-  box-shadow: 2px 2px 2px gray;
+  box-shadow: 1px 1px 2px gray;
   border-radius: 5px;
 }
 
 .login-signup button:active, .signup button:active {
-  box-shadow: 2px 2px 2px gray inset;
+  box-shadow: 1px 1px 2px gray inset;
 }
 
 .login-signup-switch {
@@ -156,7 +156,7 @@ form.login-signup {
   padding: 15px 32px;
   color: #FFF;
   border-radius: 4px;
-  box-shadow: 2px 2px 2px grey;
+  box-shadow: 1px 1px 2px grey;
   box-sizing: border-box;
   width: 100%;
   text-align: center;
@@ -174,7 +174,7 @@ form.login-signup {
 }
 
 .guest-user:active {
-  box-shadow: 2px 2px 2px gray inset;
+  box-shadow: 1px 1px 2px gray inset;
 }
 
 .or {

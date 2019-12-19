@@ -116,6 +116,44 @@ i.fa-untappd {
   justify-content: center;
 }
 
+.footer-nav {
+  background: #1e1f1d;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-menu-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.footer-menu-list li a, .footer-nav p {
+  color: #fff;
+}
+
+.JL-logo {
+  display: flex;
+  align-items: center;
+}
+
+.JL-logo-image {
+  height: auto;
+  width: 20px;
+  margin: 0 6px 0 0;
+}
+
+.footer-menu-list li a:hover {
+  background: #fff;
+  border-radius: 4px;
+  padding: 7px;
+  color: #000;
+  transition: .3s;
+}
+
 @media only screen and (max-width: 1024px) {
   .greeting-phone {
     display: none;
