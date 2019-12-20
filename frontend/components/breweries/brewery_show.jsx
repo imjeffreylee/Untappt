@@ -79,7 +79,7 @@ class BreweryShow extends React.Component {
     }
 
     window.scrollTo(0, 0);
-
+// debugger
     return (
       <>
         <section className="profile-body">

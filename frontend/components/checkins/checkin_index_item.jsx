@@ -132,18 +132,18 @@ class CheckinIndexItem extends React.Component {
                         </div>
                         <div className="bottom-part">
                             <div className="comment-toast">
-                                <a href="#" className="comment-btn btn">
+                                <div href="#" className="comment-btn btn">
                                     <img src={window.comment_icon} alt="comment_icon"/>
                                     Comment
-                                </a>
-                                <a href="#" className="toast-btn btn">
+                                </div>
+                                <div href="#" className="toast-btn btn">
                                     <img src={window.toast_icon} alt="comment_icon" />
                                     Toast
-                                </a>
+                                </div>
                             </div>
                             <div className="item-footer">
-                                <a href="#" className="post-date item-footer-link"> {dayAndTime} </a>
-                                <a href="#" className="post-detail item-footer-link">View Detailed Check-in</a>
+                                <span href="#" className="post-date item-footer-link"> {dayAndTime} </span>
+                                <span className="post-detail item-footer-link">View Detailed Check-in</span>
                                 {deleteCheckin}
                             </div>
                         </div>

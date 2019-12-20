@@ -23,8 +23,8 @@
 }
 
 .top-part p a:hover,
-.post-date:hover,
-.post-detail:hover,
+/* .post-date:hover, */
+/* .post-detail:hover, */
 .delete-post:hover
 {
     opacity: .5;
@@ -35,7 +35,7 @@
     margin-bottom: 12px;
 }
 
-a.btn {
+.btn {
     width: 50%;
     box-sizing: border-box;
     display: flex;
@@ -49,13 +49,13 @@ a.btn {
     box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.2);
 }
 
-a.btn:hover {
+/* .btn:hover {
     background: rgb(134, 135, 135);
-}
+} */
 
-a.btn:active {
+/* .btn:active {
     background: rgb(96, 96, 96);
-}
+} */
 
 .btn img {
     max-height: 25px;
