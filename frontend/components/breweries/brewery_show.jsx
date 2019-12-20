@@ -36,8 +36,13 @@ class BreweryShow extends React.Component {
     let checkinsOrDrinks;
     let linkDrinksOrCheckins;
     let linkToCreateDrink;
+    let beerListHeader;
     if (this.state.showDrinks) {
-      checkinsOrDrinks = brewDrinks.map(brewDrink => {
+      beerListHeader = (
+        <h2>Beer List</h2>
+      )
+
+      checkinsOrDrinks = brewDrinks.reverse().map(brewDrink => {
         return (
           <div key={brewDrink.id}>
             <DrinksIndexItem
@@ -49,7 +54,7 @@ class BreweryShow extends React.Component {
       });
 
       linkDrinksOrCheckins = (
-        <a onClick={() => this.setState({ showDrinks: false })}>All Checkins</a>
+        <a onClick={() => this.setState({ showDrinks: false })}>Recent Activities</a>
       );
 
       linkToCreateDrink = (
@@ -131,7 +136,7 @@ class BreweryShow extends React.Component {
                 </div>
               </div>
               <div className="brew-activity-box">
-                <h2>Beer List</h2>
+                {beerListHeader}
                 {checkinsOrDrinks}
               </div>
             </div>

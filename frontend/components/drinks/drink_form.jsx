@@ -7,12 +7,12 @@ class DrinkForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            drink_name: "",
+            drink_name: null,
             brewery_id: props.match.params.breweryId,
-            style: "",
+            style: null,
             ABV: null,
             IBU: null,
-            description: ""
+            description: null
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -66,7 +66,7 @@ class DrinkForm extends React.Component {
                     </label>
                     <div className="abv-ibu-style">
                         <div className="abv">
-                            <label>ABV
+                            <label>ABV %
                                 <input type="number" onChange={this.handleChange("ABV")} />
                             </label>
                         </div>

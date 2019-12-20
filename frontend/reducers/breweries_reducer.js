@@ -19,10 +19,8 @@ const BreweriesReducer = (state = {}, action) => {
     case RECEIVE_DRINKS:
       return action.breweries;
 
-    //
     case RECEIVE_DRINK:
       return action.breweries;
-    //
 
     default:
       return state;

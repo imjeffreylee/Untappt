@@ -34,9 +34,6 @@ export const fetchDrinks = () => dispatch => {
   );
 };
 
-export const createDrink = drink => dispatch => {
-  return DrinkAPIUtil.createDrink(drink)
-  // .then(payload => 
-  //   dispatch(receiveDrink(payload))
-  // );
+export const createDrink = drink => {
+  return DrinkAPIUtil.createDrink(drink);
 };
