@@ -13,9 +13,7 @@ class Api::DrinksController < ApplicationController
   
   def create
     @drink = Drink.new(drink_params)
-    if @drink.save
-      render :show
-    else
+    if !@drink.save
       render json: @drink.errors.full_messages, status: 422
     end
   end

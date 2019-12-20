@@ -4,7 +4,6 @@ import { closeModal } from "../../actions/modal_actions";
 import { createCheckin } from "../../actions/checkin_actions";
 
 const msp = state => {
-    // debugger
     return {
         userId: state.session.id
     }

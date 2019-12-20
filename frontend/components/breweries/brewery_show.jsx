@@ -40,7 +40,6 @@ class BreweryShow extends React.Component {
       checkinsOrDrinks = brewDrinks.map(brewDrink => {
         return (
           <div key={brewDrink.id}>
-            <h2>Beer List</h2>
             <DrinksIndexItem
               drink={brewDrink}
               brewery={this.props.brewery}
@@ -75,7 +74,7 @@ class BreweryShow extends React.Component {
     }
 
     window.scrollTo(0, 0);
-// debugger
+
     return (
       <>
         <section className="profile-body">
@@ -132,6 +131,7 @@ class BreweryShow extends React.Component {
                 </div>
               </div>
               <div className="brew-activity-box">
+                <h2>Beer List</h2>
                 {checkinsOrDrinks}
               </div>
             </div>

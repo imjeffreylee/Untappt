@@ -1,9 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { fetchBrewery } from "../../actions/brewery_actions";
+import { createDrink } from "../../actions/drink_actions";
 
 class DrinkForm extends React.Component {
     constructor(props) {
-        // debugger
         super(props);
         this.state = {
             drink_name: "",
@@ -13,13 +14,34 @@ class DrinkForm extends React.Component {
             IBU: null,
             description: ""
         }
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        let breweryId = this.props.match.params.breweryId;
+        this.props.fetchBrewery(breweryId);
+    }
+
+    handleChange(field) {
+        return e => {
+            this.setState({ [field]: e.target.value })
+        }
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.createDrink(this.state).then(this.props.history.push(`/breweries/${this.state.brewery_id}`))
     }
 
     render() {
+        if (!this.props.brewery) {
+            return null;
+        }
+        
         return (
             <div className="beer-form-master">
                 <div className="create-space"></div>
-                <form className="add-beer-form">
+                <form className="add-beer-form" onSubmit={this.handleSubmit} >
                     <div className="form-container">
                         <h1>Add New Beer</h1>
                         <h2>Didn't find what you were looking for? Use this form to add a new beer.</h2>
@@ -37,25 +59,25 @@ class DrinkForm extends React.Component {
                         </ul>
                     </div>
                     <label>BEER NAME
-                        <input type="text"/>
+                        <input type="text" onChange={this.handleChange("drink_name")} />
                     </label>
                     <label>BREWERY NAME
-                        <input type="text"/>
+                        <input type="text" disabled value={this.props.brewery.brewery_name} />
                     </label>
                     <div className="abv-ibu-style">
                         <div className="abv">
                             <label>ABV
-                                <input type="number"/>
+                                <input type="number" onChange={this.handleChange("ABV")} />
                             </label>
                         </div>
                         <div className="ibu">
                             <label>IBU
-                                <input type="text"/>
+                                <input type="text" onChange={this.handleChange("IBU")} />
                             </label>
                         </div>
                         <div className="beer-style">
                             <label>STYLE
-                                <select name="style" defaultValue="Select a style">
+                                <select name="style" defaultValue="Select a style" onChange={this.handleChange("style")}>
                                     <option disabled value="Select a style">Select a style</option>
                                     <option value="Cider">Cider</option>
                                     <option value="IPA">IPA</option>
@@ -76,22 +98,26 @@ class DrinkForm extends React.Component {
                     </div>
                     <div className="description">
                         <label>DESCRIPTION
-                            <textarea name="description"></textarea>
+                            <textarea name="description" onChange={this.handleChange("description")}></textarea>
                         </label>
                     </div>
-                    <input type="submit" value="Add New Beer"/>
+                    <input type="submit" value="Add New Beer" />
                 </form>
             </div>
         )
     }
 }
 
-const msp = (state, ownProps) => ({
-
-})
+const msp = (state, ownProps) => {
+    let breweryId = ownProps.match.params.breweryId;
+    return {
+        brewery: state.entities.breweries[breweryId]
+    }
+}
 
 const mdp = dispatch => ({
-
+    fetchBrewery: id => dispatch(fetchBrewery(id)),
+    createDrink: drink => dispatch(createDrink(drink))
 })
 
 export default connect(msp, mdp)(DrinkForm);
