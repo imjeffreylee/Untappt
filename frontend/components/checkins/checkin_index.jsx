@@ -3,7 +3,6 @@ import CheckinIndexItem from "./checkin_index_item";
 import { connect } from "react-redux";
 import { deleteCheckin } from "../../actions/checkin_actions"
 
-
 class CheckinIndex extends React.Component {
     constructor(props) {
         super(props);

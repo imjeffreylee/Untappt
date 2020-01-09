@@ -30,7 +30,7 @@ class Navbar extends React.Component {
                 </div>
                 <ul>
                   <li>
-                    <a href="#">The Pub</a>
+                    <Link to="/checkins">The Pub</Link>
                   </li>
                   <li>
                     <Link to="/breweries">Breweries</Link>
