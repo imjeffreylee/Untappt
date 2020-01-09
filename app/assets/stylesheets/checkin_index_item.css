@@ -25,8 +25,7 @@
 .top-part p a:hover,
 /* .post-date:hover, */
 /* .post-detail:hover, */
-.delete-post:hover
-{
+.delete-post:hover {
     opacity: .5;
 }
 
