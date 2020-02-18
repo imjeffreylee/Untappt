@@ -8,4 +8,6 @@ class Checkin < ApplicationRecord
   has_one :brewery,
     through: :drink,
     source: :brewery
+
+  has_one_attached :photo
 end
