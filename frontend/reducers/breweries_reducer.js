@@ -1,7 +1,4 @@
-import {
-  RECEIVE_BREWERY,
-  RECEIVE_BREWERIES
-} from "../actions/brewery_actions";
+import { RECEIVE_BREWERY, RECEIVE_BREWERIES } from "../actions/brewery_actions";
 import { RECEIVE_DRINKS, RECEIVE_DRINK } from "../actions/drink_actions"
 import merge from "lodash/merge";
 
