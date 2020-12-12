@@ -1,13 +1,16 @@
 import React from 'react';
 import merge from "lodash/merge";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import SignupForm from './SignupForm';
 
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       username: "",
       password: "",
+      confirmPassword: "",
       email: "",
       first_name: "",
       last_name: "",
@@ -16,8 +19,10 @@ class SessionForm extends React.Component {
       birthday: "",
       location: ""
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
+    this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
@@ -113,85 +118,16 @@ class SessionForm extends React.Component {
                   <h6>DRINK SOCIALLY</h6>
                 </Link>
               </div>
-              <p className="brewery-warning">
-                Are you a brewery that's trying to get added to Untappt, claim and manage your brewery page, or access your brewery account? Check this out first:
-                <a href="#">
-                  &nbsp;Getting on Untappt: Brewery Guide
-                </a>
-              </p>
-              <p className="all-fields">
-                All fields below are required unless specified.
-              </p>
-              {this.renderErrors()}
-              <div className="input-holder">
-                <div className="user-email">
-                  <div className="icon-input-wrapper">
-                    <i className="fas fa-user"></i>
-                    <input type="text"
-                      value={this.state.username}
-                      onChange={this.update('username')}
-                      placeholder="Username"
-                      className="input-username"
-                    />
-                  </div>
-                  <div className="icon-input-wrapper">
-                    <i className="fas fa-envelope"></i>
-                    <input type="email"
-                      value={this.state.email}
-                      onChange={this.update('email')}
-                      placeholder="Email Address"
-                      className="input-email"
-                    />
-                  </div>
-                </div>
-                <p className="password-warning">
-                  Avoid using common words and include a mix of letters and numbers.
-                </p>
-                <div className="password-confirm-password">
-                  <div className="icon-input-wrapper">
-                    <i className="fas fa-unlock"></i>
-                    <input type="password"
-                      value={this.state.password}
-                      onChange={this.update('password')}
-                      placeholder="Password"
-                      className="input-password"
-                    />
-                  </div>
-                  <div className="icon-input-wrapper">
-                    <i className="fas fa-unlock"></i>
-                    <input type="password"
-                      value={this.state.password}
-                      onChange={this.update('password')}
-                      placeholder="Repeat password"
-                      className="input-password"
-                    />
-                  </div>
-                </div>
-                <div className="first-last-name">
-                  <div className="icon-input-wrapper">
-                    <input type="text"
-                      value={this.state.first_name}
-                      onChange={this.update('first_name')}
-                      placeholder="First name"
-                      className="input-first-name"
-                    />
-                  </div>
-                  <div className="icon-input-wrapper">
-                    <input type="text"
-                      value={this.state.last_name}
-                      onChange={this.update('last_name')}
-                      placeholder="Last name"
-                      className="input-last-name"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="button-holder">
-                <button>Create Account</button>
-              </div>
-              <p className="login-signup-switch">
-                Already have an account? <Link to="/login" onClick={this.props.clearErrors}>Log in!</Link>
-              </p>
+              <SignupForm
+                username={this.state.username}
+                email={this.state.email}
+                password={this.state.password}
+                confirmPassword={this.state.confirmPassword}
+                firstName={this.state.firstName}
+                lastName={this.state.lastName}
+                update={this.update}
+                clearErrors={this.props.clearErrors}
+              />
             </div>
           </form>
         </div>
