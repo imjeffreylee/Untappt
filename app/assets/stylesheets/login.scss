@@ -93,6 +93,7 @@
 .login-signup-switch {
   font-size: 20px;
   color: grey;
+  text-align: center;
 }
 
 .login-signup-switch a {
@@ -107,7 +108,8 @@
 }
 
 form.login-signup {
-  width: 400px;
+  min-width: 400px;
+  max-width: 550px;
   background: white;
   display: flex;
   justify-content: center;

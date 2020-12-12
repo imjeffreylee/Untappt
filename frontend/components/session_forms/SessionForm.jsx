@@ -62,26 +62,36 @@ class SessionForm extends React.Component {
       )
     }
   }
-
+// adjust signup form height
   render() {
     const {
       formType,
       clearErrors,
     } = this.props;
 
+    const {
+      username,
+      password,
+      email,
+      confirmPassword,
+      firstName,
+      lastName,
+    } = this.state;
+
     const formToShow = (formType === "Login") ?
     <LoginForm
-      username={this.state.username}
-      password={this.state.password}
+      username={username}
+      password={password}
       update={this.update}
+      clearErrors={clearErrors}
     /> :
     <SignupForm
-      username={this.state.username}
-      email={this.state.email}
-      password={this.state.password}
-      confirmPassword={this.state.confirmPassword}
-      firstName={this.state.firstName}
-      lastName={this.state.lastName}
+      username={username}
+      email={email}
+      password={password}
+      confirmPassword={confirmPassword}
+      firstName={firstName}
+      lastName={lastName}
       update={this.update}
       clearErrors={clearErrors}
     />

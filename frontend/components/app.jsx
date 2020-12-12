@@ -1,7 +1,7 @@
 import React from 'react'
 import GreetingsContainer from "./greetings/greetings_container";
-import LoginFormContainer from "./session_forms/login_form_container";
-import SignupFormContainer from "./session_forms/signup_form_container";
+import LoginFormContainer from "./session_forms/LoginFormContainer";
+import SignupFormContainer from "./session_forms/SignupFormContainer";
 import UserProfileContainer from "./users/user_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { Switch } from "react-router-dom";

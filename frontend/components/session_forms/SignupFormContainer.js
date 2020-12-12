@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { signUp, clearErrors } from "../../actions/session_actions";
-import SessionForm from "./session_form";
+import SessionForm from "./SessionForm";
 
 const msp = state => {
   return {
