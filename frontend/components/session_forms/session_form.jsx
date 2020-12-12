@@ -2,11 +2,12 @@ import React from 'react';
 import merge from "lodash/merge";
 import { Link } from 'react-router-dom';
 import SignupForm from './SignupForm';
+import LoginForm from './LoginForm';
 
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       username: "",
       password: "",
@@ -63,76 +64,46 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    if (this.props.formType === "Login") {
-      return (
-        <div className="session-form-container">
-          <form onSubmit={this.handleSubmit} className="login-signup">
-            <div className="inner-session-form-container">
-              <div className="form-header josefin">
-                <Link to="/">
-                  <h2>UNTAPPT</h2>
-                  <h6>DRINK SOCIALLY</h6>
-                </Link>
-              </div>
-              {this.renderErrors()}
-              <a className="guest-user" onClick={this.handleGuest}>Browse as a <span>GUEST</span></a>
-              <p className="or">OR</p>
-              <div className="input-holder">
-                <div className="icon-input-wrapper">
-                  <i className="fas fa-user"></i>
-                  <input type="text"
-                    value={this.state.username}
-                    onChange={this.update('username')}
-                    placeholder="Username"
-                    className="input-username"
-                  />
-                </div>
-                <div className="icon-input-wrapper">
-                  <i className="fas fa-unlock"></i>
-                  <input type="password"
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    placeholder="Password"
-                    className="input-password"
-                  />
-                </div>
-              </div>
-              <div className="button-holder">
-                <button>Log in</button>
-              </div>
-              <p className="login-signup-switch">
-                New around here? <Link to="/signup" onClick={this.props.clearErrors}>Sign up!</Link>
-              </p>
+    const {
+      formType,
+      clearErrors,
+    } = this.props;
+
+    const formToShow = (formType === "Login") ?
+    <LoginForm
+      username={this.state.username}
+      password={this.state.password}
+      update={this.update}
+    /> :
+    <SignupForm
+      username={this.state.username}
+      email={this.state.email}
+      password={this.state.password}
+      confirmPassword={this.state.confirmPassword}
+      firstName={this.state.firstName}
+      lastName={this.state.lastName}
+      update={this.update}
+      clearErrors={clearErrors}
+    />
+
+    return (
+      <div className="session-form-container">
+        <form onSubmit={this.handleSubmit} className="login-signup">
+          <div className="inner-session-form-container">
+            <div className="form-header josefin">
+              <Link to="/">
+                <h2>UNTAPPT</h2>
+                <h6>DRINK SOCIALLY</h6>
+              </Link>
             </div>
-          </form>
-        </div>
-      )
-    } else if (this.props.formType === "Sign up") {
-      return (
-        <div className="session-form-container">
-          <form onSubmit={this.handleSubmit} className="signup">
-            <div className="inner-signup-form-container">
-              <div className="form-header josefin">
-                <Link to="/">
-                  <h2>UNTAPPT</h2>
-                  <h6>DRINK SOCIALLY</h6>
-                </Link>
-              </div>
-              <SignupForm
-                username={this.state.username}
-                email={this.state.email}
-                password={this.state.password}
-                confirmPassword={this.state.confirmPassword}
-                firstName={this.state.firstName}
-                lastName={this.state.lastName}
-                update={this.update}
-                clearErrors={this.props.clearErrors}
-              />
-            </div>
-          </form>
-        </div>
-      )
-    }
+            {this.renderErrors()}
+            <a className="guest-user" onClick={this.handleGuest}>Browse as a <span>GUEST</span></a>
+            <p className="or">OR</p>
+            {formToShow}
+          </div>
+        </form>
+      </div>
+    )
   }
 }
 
