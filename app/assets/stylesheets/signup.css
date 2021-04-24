@@ -36,6 +36,7 @@ form.signup {
     background: #FFFFAA;
     padding: 6px;
     border-radius: 4px;
+    margin: 10px;
 }
 
 .brewery-warning a {
@@ -53,8 +54,5 @@ form.signup {
     line-height: 1.2em;
     text-align: center;
     font-size: .9em;
-}
-
-.password-warning {
-    margin-bottom: 13px;
+    margin-bottom: 10px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import merge from "lodash/merge";
 import { Link } from 'react-router-dom';
+
 import SignupForm from './SignupForm';
 import LoginForm from './LoginForm';
 
@@ -62,7 +63,7 @@ class SessionForm extends React.Component {
       )
     }
   }
-// adjust signup form height
+  // adjust signup form height
   render() {
     const {
       formType,
@@ -79,22 +80,22 @@ class SessionForm extends React.Component {
     } = this.state;
 
     const formToShow = (formType === "Login") ?
-    <LoginForm
-      username={username}
-      password={password}
-      update={this.update}
-      clearErrors={clearErrors}
-    /> :
-    <SignupForm
-      username={username}
-      email={email}
-      password={password}
-      confirmPassword={confirmPassword}
-      firstName={firstName}
-      lastName={lastName}
-      update={this.update}
-      clearErrors={clearErrors}
-    />
+      <LoginForm
+        username={username}
+        password={password}
+        update={this.update}
+        clearErrors={clearErrors}
+      /> :
+      <SignupForm
+        username={username}
+        email={email}
+        password={password}
+        confirmPassword={confirmPassword}
+        firstName={firstName}
+        lastName={lastName}
+        update={this.update}
+        clearErrors={clearErrors}
+      />
 
     return (
       <div className="session-form-container">
