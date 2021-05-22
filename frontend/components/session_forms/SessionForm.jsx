@@ -38,7 +38,8 @@ class SessionForm extends React.Component {
     const user = merge({}, {
       username: "guest",
       password: "password"
-    })
+    });
+
     this.props.processForm(user);
   }
 
@@ -63,13 +64,9 @@ class SessionForm extends React.Component {
       )
     }
   }
-  // adjust signup form height
-  render() {
-    const {
-      formType,
-      clearErrors,
-    } = this.props;
 
+  render() {
+    const { formType, clearErrors } = this.props;
     const {
       username,
       password,
